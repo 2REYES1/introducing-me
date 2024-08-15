@@ -1,4 +1,6 @@
 import './App.css';
+import bootstrap from 'bootstrap';
+
 
 function App() {
   return (
