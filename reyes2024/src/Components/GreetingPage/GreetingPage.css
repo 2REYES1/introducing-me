@@ -1,0 +1,19 @@
+.nanum-pen-gp {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-gp {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-wrapper-gp {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
