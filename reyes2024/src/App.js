@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="container main-wrapper">
       <MyNavBar greetingHref={"#greeting-page"} aboutHref={"#alyssa-page"}/>
-      <GreetingPage className="greeting-page" />
-      <AlyssaPage className="alyssa-page" />
+      <GreetingPage />
+      <AlyssaPage />
     </div>
   );
 }
