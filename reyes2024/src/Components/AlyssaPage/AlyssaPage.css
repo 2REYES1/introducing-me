@@ -1,0 +1,19 @@
+.nanum-pen-ap {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-ap {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-wrapper-ap {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
