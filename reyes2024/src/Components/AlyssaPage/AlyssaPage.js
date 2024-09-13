@@ -6,17 +6,17 @@ function AlyssaPage(){
   return(
     <div class="container main-wrapper-ap" id="alyssa-page">
       <div class="row h-100 align-items-center justify-content-center">
-        <div class="col-md-4 justify-content-center text-center">
+        <div class="col-md-3 justify-content-center text-center m-5">
           <h3 class="nanum-pen-ap">ALYSSA REYES</h3>
           <img src={AlyssaPicture} class="img-fluid rounded" alt="Alyssa Reyes headshot"/>
           <a href="REYES-RESUME.pdf" download="REYES-RESUME" class="roboto-mono-ap">RESUME</a>
           <a href="https://github.com/2REYES1" class="roboto-mono-ap">GITHUB</a>
         </div>
-        <div class="col-md-4 justify-content-center text-left">
+        <div class="col-sm justify-content-center text-left">
           <h3 class="roboto-mono-ap">INTERESTS</h3>
           <p class="roboto-mono-ap">front-end web development, full-stack web development, ui/ux design, game development, game design, artificial intelligence.</p>
         </div>
-        <div class="col-md-4 justify-content-center text-left">
+        <div class="col-sm justify-content-center text-left">
           <h3 class="roboto-mono-ap">ABOUT</h3>
           <p class="roboto-mono-ap">21 | she/her | entp-a<br />cs student at UC Irvine. from the Bay Area. loves chocolate.</p>
           <h3 class="roboto-mono-ap">HOBBIES</h3>

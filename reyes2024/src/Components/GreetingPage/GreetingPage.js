@@ -1,5 +1,6 @@
 import './GreetingPage.css';
 import * as React from 'react';
+import EmailMeButton from '../EmailMeButton/EmailMeButton';
 
 function GreetingPage() {
   return (
@@ -8,7 +9,7 @@ function GreetingPage() {
         <div className="flex-column-xs-12 justify-content-center text-center">
           <h1 className="nanum-pen-gp">Hello, I'm Alyssa!</h1>
           <p className="roboto-mono-gp">a uc irvine computer science student who loves the endless knowledge that comes with tech</p>
-          <button href="mailto:alyssalareyes@gmail.com" className="nanum-pen-gp">Contact Me</button>
+          <EmailMeButton />
         </div>
       </div>
     </div>
