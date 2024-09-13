@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GreetingPage from './Components/GreetingPage/GreetingPage';
 import AlyssaPage from './Components/AlyssaPage/AlyssaPage';
 import MyNavBar from './Components/MyNavBar/MyNavBar';
+import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <MyNavBar greetingHref={"#greeting-page"} aboutHref={"#alyssa-page"}/>
       <GreetingPage />
       <AlyssaPage />
+      <ProjectsPage />
     </div>
   );
 }
