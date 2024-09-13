@@ -4,7 +4,7 @@ import AlyssaPicture from './imgs/ally.JPG';
 
 function AlyssaPage(){
   return(
-    <div class="container main-wrapper-ap" id="about-me-page">
+    <div class="container main-wrapper-ap" id="alyssa-page">
       <div class="row h-100 align-items-center justify-content-center">
         <div class="col-md-4 justify-content-center text-center">
           <h3 class="nanum-pen-ap">ALYSSA REYES</h3>
