@@ -1,12 +1,12 @@
 import './App.css';
-import bootstrap from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import GreetingPage from './Components/GreetingPage/GreetingPage';
 import AlyssaPage from './Components/AlyssaPage/AlyssaPage';
 
 
 function App() {
   return (
-    <div>
+    <div className="container main-wrapper">
       <GreetingPage />
       <AlyssaPage />
     </div>
