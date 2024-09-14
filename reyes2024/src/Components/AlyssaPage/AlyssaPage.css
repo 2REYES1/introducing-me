@@ -16,5 +16,75 @@
   align-items: center;
   /* display: flex; */
   justify-content: center;
+  overflow-y: auto;
 }
+
+/* Base sizes for small screens */
+.roboto-headers-ap {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+.roboto-body-text-ap {
+  font-size: 0.75rem;
+}
+
+.nanum-headers-ap{
+  font-size: 2rem;
+}
+
+/* Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+  .roboto-headers-ap {
+    font-size: 1.25rem; /* Adjust as needed */
+  }
+
+  .roboto-body-text-ap{
+    font-size: 0.8rem;
+  }
+
+  .nanum-headers-ap{
+    font-size: 2.25rem;
+  }
+}
+
+/* Large screens (≥ 992px) */
+@media (min-width: 992px) {
+  .roboto-headers-ap {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+
+  .roboto-body-text-ap{
+    font-size: 1rem;
+  }
+
+  .nanum-headers-ap{
+    font-size: 3rem;
+  }
+}
+
+/* Custom class for responsive image */
+.img-responsive {
+  max-width: 100%; /* Scales image to fit container */
+}
+
+@media (max-width: 576px) {
+  .img-responsive {
+    width: 50%; /* Smaller on extra small screens */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .img-responsive {
+    width: 75%; /* Adjust size on small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .img-responsive {
+    width: 100%; /* Full width on larger screens */
+  }
+}
+
+
+
 
