@@ -9,14 +9,18 @@ function ProjectsPage() {
         Project Showcase
       </div>
 
-      <div className='row justify-content-center'>
+      <div className='row justify-content-center align-items-center'>
 
-        <div className='col-lg-3'>
-          <ProjectCard 
-            title="Project 1" 
-            summary="a quick summary of this very cool project"
-            infoList={["React", "JavaScript", "CSS", "Frontend Development"]} 
-          />
+        <div className='col-lg-12'>
+          <div className='row justify-content-center align-items-center'>
+            <ProjectCard 
+              projectTitle="Snap & Safe" 
+              summary="a medication and label idenitification website for people with accessibility challenges"
+              moreInfo={["informationt1", "information2"]} 
+              contributions={["this is my contribution", "this is my other contribution"]}
+              languagesAndTools={["React, JavaScript, Figma, Google Gemini API"]}
+            />
+          </div>
         </div>
 
       </div>
