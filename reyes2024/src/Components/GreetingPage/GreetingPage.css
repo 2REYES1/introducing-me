@@ -17,3 +17,49 @@
   /* display: flex; */
   justify-content: center;
 }
+
+
+/* Base sizes for small screens */
+.roboto-headers-gp {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+.roboto-body-text-gp {
+  font-size: 0.75rem;
+}
+
+.nanum-headers-gp{
+  font-size: 2rem;
+}
+
+/* Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+  .roboto-headers-gp {
+    font-size: 1.25rem; /* Adjust as needed */
+  }
+
+  .roboto-body-text-gp{
+    font-size: 0.8rem;
+  }
+
+  .nanum-headers-gp{
+    font-size: 2.25rem;
+  }
+}
+
+/* Large screens (≥ 992px) */
+@media (min-width: 992px) {
+  .roboto-headers-gp {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+
+  .roboto-body-text-gp{
+    font-size: 1rem;
+  }
+
+  .nanum-headers-gp{
+    font-size: 3rem;
+  }
+}
+
+
