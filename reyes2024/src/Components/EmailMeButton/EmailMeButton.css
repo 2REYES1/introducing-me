@@ -5,3 +5,24 @@
     font-style: normal;
   }
   
+  /* Base sizes for small screens */
+
+.roboto-body-text-email-me{
+  font-size: 0.75rem;
+}
+
+
+
+/* Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+  .roboto-body-text-email-me{
+    font-size: 0.8rem;
+  }
+}
+
+/* Large screens (≥ 992px) */
+@media (min-width: 992px) {
+  .roboto-body-text-email-me{
+    font-size: 1rem;
+  }
+}
