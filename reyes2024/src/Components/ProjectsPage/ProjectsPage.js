@@ -18,7 +18,7 @@ function ProjectsPage() {
               summary="a medication and label idenitification website for people with accessibility challenges"
               moreInfo={["informationt1", "information2"]} 
               contributions={["this is my contribution", "this is my other contribution"]}
-              languagesAndTools={["React, JavaScript, Figma, Google Gemini API"]}
+              languagesAndTools={["React", "JavaScript", "Figma", "Google Gemini API"]}
             />
           </div>
         </div>

@@ -18,22 +18,24 @@ function ProjectCard(props) {
       {/* project card */}
       <div className='row justify-content-center align-items-center'>
         {/* project title and more info button */}
-        <div className="col-sm-6 card align-items-center justify-content-center project-card-title">
-          <div className='roboto-mono-proj-card'>
-            {props.projectTitle}
+        <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-title">
+          <div className="row align-items-center justify-content-center">
+            <p className='roboto-mono-proj-card text-center'>
+              {props.projectTitle}
+            </p>
+            <button 
+              className='btn btn-primary roboto-mono-proj-card' 
+              onClick={handleShowModal}>
+              more info  
+            </button>
           </div>
-          <button 
-            className='btn btn-primary roboto-mono-proj-card' 
-            onClick={handleShowModal}>
-            more info  
-          </button>
         </div>
 
         {/* summary display*/}
         <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-summary">
-          <div className='row roboto-mono-proj-card align-items-center justify-content-center m-2'>
+          <p className='row roboto-mono-proj-card align-items-center justify-content-center m-2'>
             {props.summary}
-          </div>
+          </p>
         </div>
       </div>
 
@@ -44,13 +46,34 @@ function ProjectCard(props) {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">{props.projectTitle}</h5>
-                <button type="button" className="close" onClick={handleCloseModal} aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
               </div>
+
               <div className="modal-body">
-                <p>{props.moreInfo}</p>
+                  <p>
+                    more info:
+                  </p>
+                  {/* map through props.moreInfo to format each information. */}
+                  {props.moreInfo && props.moreInfo.map((info, index) => (
+                    <p key={index}># {info}</p>  // Format as a heading
+                  ))}
+
+                  <p>
+                    contributions:
+                  </p>
+                  {/* map through props.contributions to format each contribution */}
+                  {props.contributions && props.contributions.map((cont, index) => (
+                    <p key={index}># {cont}</p>
+                  ))}
+
+                  <p>
+                    languages and tools:
+                  </p>
+                  {/* map through props.languagesAndTools to format each language and tool */}
+                  {props.languagesAndTools && props.languagesAndTools.map((lt, index) => (
+                    <p key={index}># {lt}</p>
+                  ))}
               </div>
+
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>
                   Close
@@ -60,6 +83,7 @@ function ProjectCard(props) {
           </div>
         </div>
       )}
+
     </>
   );
 }
