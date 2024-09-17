@@ -12,14 +12,106 @@
 }
 
 .project-card-title{
-    width: 25rem;
-    height: 10rem;
+    width: 15rem;
     border: 1px solid blue;
+    border-radius: 10px;
 }
 
 .project-card-summary{
     width: 25rem;
-    height: 10rem;
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 45px;
 }
+
+.project-card-btn{
+    width: 6rem;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/* Base sizes for small screens */
+.roboto-headers-proj-card {
+    font-size: 1rem; /* Adjust as needed */
+    margin:5px;
+  }
+  
+.roboto-body-text-proj-card {
+   font-size: 0.75rem;
+}
+  
+.nanum-headers-ap{
+    font-size: 2rem;
+}
+  
+  /* Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+    .roboto-headers-proj-card{
+        font-size: 1.25rem; /* Adjust as needed */
+    }
+    
+    .roboto-body-text-proj-card{
+        font-size: 0.8rem;
+    }
+    
+    .nanum-headers-ap{
+        font-size: 2.25rem;
+    }
+
+    .project-card-title{
+        width: 15rem;
+        height: 10rem;
+        border: 1px solid blue;
+    }
+    
+    .project-card-summary{
+        width: 15rem;
+        height: 10rem;
+        border: 1px solid black;
+        border-radius: 25px;
+    }
+
+    .project-card-btn{
+        width: 7rem;
+    }
+
+}
+  
+  /* Large screens (≥ 992px) */
+  @media (min-width: 992px) {
+    .roboto-headers-proj-card{
+      font-size: 1.5rem; /* Adjust as needed */
+    }
+  
+    .roboto-body-text-proj-card{
+      font-size: 1rem;
+    }
+  
+    .nanum-headers-ap{
+      font-size: 3rem;
+    }
+
+    .project-card-title{
+        width: 25rem;
+        height: 10rem;
+        border: 1px solid blue;
+    }
+    
+    .project-card-summary{
+        width: 25rem;
+        height: 10rem;
+        border: 1px solid black;
+        border-radius: 25px;
+    }
+    .project-card-btn{
+        width: 10rem;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
+}
+  
