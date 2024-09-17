@@ -14,7 +14,7 @@ function ProjectsPage() {
         <div className='col-lg-12'>
           <div className='row justify-content-center align-items-center'>
             <ProjectCard 
-              projectTitle="Snap & Safe" 
+              projectTitle="snap & safe" 
               summary="a medication and label idenitification website for people with accessibility challenges"
               moreInfo={["informationt1", "information2"]} 
               contributions={["this is my contribution", "this is my other contribution"]}

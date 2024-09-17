@@ -10,3 +10,15 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.project-card-title{
+    width: 25rem;
+    height: 10rem;
+}
+
+.project-card-summary{
+    width: 25rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 25px;
+}
