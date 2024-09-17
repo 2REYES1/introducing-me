@@ -20,11 +20,11 @@ function ProjectCard(props) {
         {/* project title and more info button */}
         <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-title">
           <div className="row align-items-center justify-content-center">
-            <p className='roboto-mono-proj-card text-center'>
+            <p className='roboto-mono-proj-card text-center roboto-headers-proj-card'>
               {props.projectTitle}
             </p>
             <button 
-              className='btn btn-primary roboto-mono-proj-card' 
+              className='roboto-mono-proj-card roboto-body-text-proj-card project-card-btn' 
               onClick={handleShowModal}>
               more info  
             </button>
@@ -33,7 +33,7 @@ function ProjectCard(props) {
 
         {/* summary display*/}
         <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-summary">
-          <p className='row roboto-mono-proj-card align-items-center justify-content-center m-2'>
+          <p className='row roboto-mono-proj-card align-items-center justify-content-center m-2 roboto-body-text-proj-card'>
             {props.summary}
           </p>
         </div>
