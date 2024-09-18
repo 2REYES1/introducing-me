@@ -21,6 +21,11 @@
 
 .nanum-headers-proj-page{
     font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-proj-page{
+    margin: 5px;
 }
 
   /* Medium screens (≥ 768px) */
@@ -33,6 +38,6 @@
 /* Large screens (≥ 992px) */
 @media (min-width: 992px) {
     .nanum-headers-proj-page{
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 }

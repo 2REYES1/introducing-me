@@ -53,9 +53,21 @@ function ProjectCard(props) {
                     more info:
                   </p>
                   {/* map through props.moreInfo to format each information. */}
-                  {props.moreInfo && props.moreInfo.map((info, index) => (
-                    <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}># {info}</p>  // Format as a heading
-                  ))}
+                  {props.moreInfo && props.moreInfo.map((info, index) => {
+                    if (typeof info === 'string') {
+                      return (
+                        <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}>
+                          # {info}
+                        </p>
+                      );
+                    } else if (info.type === 'link') {
+                      return (
+                        <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}>
+                          # {info.text} --{'>'} <a href={info.url} target="_blank" rel="noopener noreferrer">{props.projectTitle}</a>
+                        </p>
+                      );
+                    }
+                  })}
 
                   <p className='roboto-modal-headers-proj-card'>
                     contributions:
