@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 import './ProjectCard.css';
+import React, { useState } from 'react';
+
 
 function ProjectCard(props) {
   const [showModal, setShowModal] = useState(false);
@@ -39,7 +40,10 @@ function ProjectCard(props) {
         </div>
       </div>
 
-      {/* pop up to show more information */}
+      {/* 
+          pop up to show more information.
+          CODE FOR MODAL STARTS HERE
+      */}
       {showModal && (
         <div className="modal show" tabIndex="-1" role="dialog" style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
           <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -63,7 +67,7 @@ function ProjectCard(props) {
                     } else if (info.type === 'link') {
                       return (
                         <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}>
-                          # {info.text} --{'>'} <a href={info.url} target="_blank" rel="noopener noreferrer">{props.projectTitle}</a>
+                          # {info.text} --{'>'} <a className='project-links' href={info.url} target="_blank" rel="noopener noreferrer">{props.projectTitle}</a>
                         </p>
                       );
                     }
@@ -87,8 +91,8 @@ function ProjectCard(props) {
               </div>
 
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>
-                  Close
+                <button type="button" className="btn btn-secondary roboto-body-text-proj-card roboto-modal-body-text-proj-card" style={{ textIndent: 0, paddingLeft: '20px', paddingRight: '20px'}} onClick={handleCloseModal}>
+                  X
                 </button>
               </div>
             </div>

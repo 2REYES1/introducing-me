@@ -13,21 +13,28 @@
 
 .project-card-title{
     width: 15rem;
-    border: 1px solid blue;
+    border: 2px solid #585c97;
+    background-color: #9599ED;
     border-radius: 10px;
 }
 
 .project-card-summary{
     width: 25rem;
-    border: 1px solid black;
+    border: 2px solid #78afd4;
     border-radius: 45px;
+    background-color: #b7d6ea;
 }
 
 .project-card-btn{
     width: 6rem;
-    border: 1px solid red;
+    border: 1px solid #435139;
+    background-color: #C4DCB2;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.project-card-btn:hover{
+    background-color: #73b043;
 }
 
 p{
@@ -35,9 +42,15 @@ p{
     padding: 0;
 }
 
+.modal-content {
+    background-color: #3C41B1; /* Deep purple background */
+    color: white; /* White text color */
+  }
+  
+
 /* Base sizes for small screens */
 .roboto-headers-proj-card {
-    font-size: 1rem; /* Adjust as needed */
+    font-size: 1rem; 
     margin:2px;
     font-weight: 700;
 }
@@ -56,6 +69,7 @@ p{
 .roboto-modal-body-text-proj-card {
     font-family: "Roboto Mono", monospace;
     text-indent: 20px;
+    padding-left: 20px;
  }
 
 .roboto-modal-headers-proj-card{
@@ -65,6 +79,16 @@ p{
     font-weight: 500;
 }
   
+p .project-links{
+    color: #99ca73;
+    text-decoration: none;
+    font-style: italic;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.777);
+}
+
+p .project-links:hover{
+    color: #ffffff;
+}
   
   /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
@@ -89,13 +113,11 @@ p{
     .project-card-title{
         width: 15rem;
         height: 10rem;
-        border: 1px solid blue;
     }
     
     .project-card-summary{
         width: 15rem;
         height: 10rem;
-        border: 1px solid black;
         border-radius: 25px;
     }
 
@@ -127,20 +149,20 @@ p{
     .project-card-title{
         width: 25rem;
         height: 10rem;
-        border: 1px solid blue;
+        margin: 10px;
     }
     
     .project-card-summary{
         width: 25rem;
         height: 10rem;
-        border: 1px solid black;
         border-radius: 25px;
     }
+
     .project-card-btn{
         width: 10rem;
-        border: 1px solid red;
         border-radius: 5px;
     }
+
     .roboto-modal-headers-proj-card{
         font-size: 1.2rem;
     }
