@@ -10,7 +10,7 @@ import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
 function App() {
   return (
     <div className="container main-wrapper">
-      <MyNavBar greetingHref={"#greeting-page"} aboutHref={"#alyssa-page"}/>
+      <MyNavBar greetingHref={"#greeting-page"} aboutHref={"#alyssa-page"} projectsHref={"#projects-page"}/>
       <GreetingPage />
       <AlyssaPage />
       <ProjectsPage />
