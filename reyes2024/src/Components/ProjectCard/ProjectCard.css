@@ -38,11 +38,28 @@ p{
 /* Base sizes for small screens */
 .roboto-headers-proj-card {
     font-size: 1rem; /* Adjust as needed */
-    margin:5px;
-  }
+    margin:2px;
+    font-weight: 700;
+}
+
+.roboto-modal-title-proj-card{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
   
 .roboto-body-text-proj-card {
    font-size: 0.75rem;
+   
+}
+
+.roboto-modal-body-text-proj-card {
+    text-indent: 20px;
+ }
+
+.roboto-modal-headers-proj-card{
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 500;
 }
   
 .nanum-headers-ap{
@@ -53,6 +70,15 @@ p{
 @media (min-width: 768px) {
     .roboto-headers-proj-card{
         font-size: 1.25rem; /* Adjust as needed */
+    }
+
+    .roboto-title-proj-card{
+        font-size: 1.4rem;
+    }
+
+    .roboto-modal-title-proj-card{
+        font-size: 1.3rem;
+        font-weight: 600;
     }
     
     .roboto-body-text-proj-card{
@@ -87,6 +113,15 @@ p{
     .roboto-headers-proj-card{
       font-size: 1.5rem; /* Adjust as needed */
     }
+
+    .roboto-title-proj-card{
+        font-size: 1.7rem;
+    }
+
+    .roboto-modal-title-proj-card{
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
   
     .roboto-body-text-proj-card{
       font-size: 1rem;
@@ -112,6 +147,9 @@ p{
         width: 10rem;
         border: 1px solid red;
         border-radius: 5px;
+    }
+    .roboto-modal-headers-proj-card{
+        font-size: 1.2rem;
     }
 }
   

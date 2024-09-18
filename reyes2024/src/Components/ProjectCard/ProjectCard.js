@@ -33,7 +33,7 @@ function ProjectCard(props) {
 
         {/* summary display*/}
         <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-summary">
-          <p className='row roboto-mono-proj-card align-items-center justify-content-center m-2 roboto-body-text-proj-card'>
+          <p className='row roboto-mono-proj-card align-items-center justify-content-center m-2 roboto-body-text-proj-card fst-italic'>
             {props.summary}
           </p>
         </div>
@@ -45,32 +45,32 @@ function ProjectCard(props) {
           <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title">{props.projectTitle}</h5>
+                <p className="modal-title roboto-modal-title-proj-card">{props.projectTitle}</p>
               </div>
 
               <div className="modal-body">
-                  <p>
+                  <p className='roboto-modal-headers-proj-card'>
                     more info:
                   </p>
                   {/* map through props.moreInfo to format each information. */}
                   {props.moreInfo && props.moreInfo.map((info, index) => (
-                    <p key={index}># {info}</p>  // Format as a heading
+                    <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}># {info}</p>  // Format as a heading
                   ))}
 
-                  <p>
+                  <p className='roboto-modal-headers-proj-card'>
                     contributions:
                   </p>
                   {/* map through props.contributions to format each contribution */}
                   {props.contributions && props.contributions.map((cont, index) => (
-                    <p key={index}># {cont}</p>
+                    <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}># {cont}</p>
                   ))}
 
-                  <p>
+                  <p className='roboto-modal-headers-proj-card'>
                     languages and tools:
                   </p>
                   {/* map through props.languagesAndTools to format each language and tool */}
                   {props.languagesAndTools && props.languagesAndTools.map((lt, index) => (
-                    <p key={index}># {lt}</p>
+                    <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}># {lt}</p>
                   ))}
               </div>
 
