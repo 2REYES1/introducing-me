@@ -43,6 +43,7 @@ p{
 }
 
 .roboto-modal-title-proj-card{
+    font-family: "Roboto Mono", monospace;
     font-size: 1.3rem;
     font-weight: 700;
 }
@@ -53,18 +54,17 @@ p{
 }
 
 .roboto-modal-body-text-proj-card {
+    font-family: "Roboto Mono", monospace;
     text-indent: 20px;
  }
 
 .roboto-modal-headers-proj-card{
+    font-family: "Roboto Mono", monospace;
     font-size: 0.85rem;
     font-style: italic;
     font-weight: 500;
 }
   
-.nanum-headers-ap{
-    font-size: 2rem;
-}
   
   /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
