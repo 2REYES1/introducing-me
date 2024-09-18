@@ -28,20 +28,19 @@
 
 .roboto-body-text-ap {
   font-size: 0.75rem;
-  margin-bottom: 10px;
 }
 
 .nanum-headers-ap{
-  font-size: 2rem;
+  font-size: 2.7rem;
   font-weight: 600;
 }
 
 .social-icons a {
-  color: red;
+  color: #6E73DD;
 }
 
 .social-icons a:hover {
-  color: darkred;
+  color: #52822e94;
 }
 
 .social-icons i{
@@ -53,7 +52,20 @@
 
 .img-responsive {
   width: 70%; 
+  border: 2px solid black;
+  box-shadow: 0 0 5px black;
 }
+
+.ap-box {
+  background-color: #91e45294; 
+  border-radius: 10px;
+  padding: 0.5rem; 
+  margin: 0.5rem;
+  border: 2px solid #3f642394; /* Slightly darker border */
+}
+
+
+
 
 /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
@@ -66,7 +78,7 @@
   }
 
   .nanum-headers-ap{
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
 
   .social-icons i{
@@ -93,7 +105,7 @@
   }
 
   .nanum-headers-ap{
-    font-size: 3rem;
+    font-size: 3.3rem;
   }
 
   .social-icons i{
