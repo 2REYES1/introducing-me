@@ -21,11 +21,13 @@
 
 /* Base sizes for small screens */
 .roboto-headers-gp {
-  font-size: 1rem; /* Adjust as needed */
+  font-size: 1rem; 
+  margin: 0;
 }
 
 .roboto-body-text-gp {
   font-size: 0.75rem;
+  margin-bottom: 25px;
 }
 
 .nanum-headers-gp{
