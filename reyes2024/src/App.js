@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import GreetingPage from './Components/GreetingPage/GreetingPage';
 import AlyssaPage from './Components/AlyssaPage/AlyssaPage';
 import MyNavBar from './Components/MyNavBar/MyNavBar';

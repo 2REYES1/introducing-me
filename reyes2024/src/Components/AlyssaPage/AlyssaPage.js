@@ -17,8 +17,17 @@ function AlyssaPage() {
         <div className="col-md-3 justify-content-center text-center p-0 m-3">
           <h3 className="nanum-pen-ap nanum-headers-ap">ALYSSA REYES</h3>
           <img src={AlyssaPicture} className="img-fluid rounded img-responsive" alt="Alyssa Reyes headshot" />
-          {/* <a href="REYES-RESUME.pdf" download="REYES-RESUME" className="roboto-mono-ap m-2">RESUME</a>
-          <a href="https://github.com/2REYES1" className="roboto-mono-ap m-2 ">GITHUB</a> */}
+          {/* Social media icons */}
+          <div className="social-icons mt-2">
+            {/* LinkedIn Icon */}
+            <a href="https://www.linkedin.com/in/alyssalareyes" target="_blank" rel="noopener noreferrer" className="m-2">
+              <i className="fab fa-linkedin fa-2x"></i>
+            </a>
+            {/* GitHub Icon */}
+            <a href="https://github.com/2REYES1" target="_blank" rel="noopener noreferrer" className="m-2">
+              <i className="fab fa-github fa-2x"></i>
+            </a>
+          </div>
         </div>
 
         <div className="col-sm justify-content-center text-left p-0 m-0">
