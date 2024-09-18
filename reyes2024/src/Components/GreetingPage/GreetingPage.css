@@ -19,6 +19,17 @@
 }
 
 
+.nanum-headers-gp span {
+  font-size: 2.3;
+  color: #92E452;
+  text-shadow: 
+    1px 1px 1px black, 
+    -1px -1px 1px black, 
+    1px -1px 1px black, 
+    -1px 1px 1px black;
+}
+
+
 /* Base sizes for small screens */
 .roboto-headers-gp {
   font-size: 1rem; 
@@ -34,6 +45,7 @@
 .nanum-headers-gp{
   font-size: 2rem;
   font-weight: 600;
+  color: black;
 }
 
 /* Medium screens (≥ 768px) */
@@ -68,6 +80,10 @@
   .nanum-headers-gp{
     font-size: 4rem;
 
+  }
+
+  .nanum-headers-gp span{
+    font-size: 4.5rem;
   }
 }
 

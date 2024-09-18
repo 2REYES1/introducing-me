@@ -1,17 +1,28 @@
 .roboto-mono-email-me {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
   }
-  
-  /* Base sizes for small screens */
 
+.btn.roboto-mono-email-me {
+    border: 2px solid #6E73DD;
+    border-radius: 20px;
+    color: #6E73DD;
+    background-color: transparent;
+    padding: 10px 20px;
+  }
+  
+.btn.roboto-mono-email-me:hover {
+    border-color: #3c42b1;
+    color: #3c42b1;
+    background-color: #91e45294;
+  }
+  
+  
 .roboto-body-text-email-me{
   font-size: 0.75rem;
 }
-
-
 
 /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
