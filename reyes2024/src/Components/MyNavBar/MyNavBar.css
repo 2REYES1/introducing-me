@@ -16,7 +16,7 @@
 }
 
 .navbar-brand {
-  font-size: 0.7rem; /* Adjust text size */
+  font-size: 0.7rem;
   color: white; /* Color of the text */
   padding: 0 10px;
 }
@@ -25,9 +25,6 @@
   color: #92E452;
 }
 
-.navbar-brand.active {
-  color: #ffa500; /* Orange text color for the active page */
-}
 
 /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
