@@ -5,3 +5,42 @@
     font-style: normal;
   }
   
+
+.custom-navbar {
+  max-width: 90vw; 
+  border-radius: 50px;
+  background-color: #3c42b19a; 
+  margin: 0 auto;
+  margin-top: 10px;
+ 
+}
+
+.navbar-brand {
+  font-size: 0.7rem; /* Adjust text size */
+  color: white; /* Color of the text */
+  padding: 0 10px;
+}
+
+.navbar-brand:hover{
+  color: #92E452;
+}
+
+.navbar-brand.active {
+  color: #ffa500; /* Orange text color for the active page */
+}
+
+/* Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+
+}
+
+/* Large screens (≥ 992px) */
+@media (min-width: 992px) {
+  .custom-navbar{
+    max-width: 50vw;
+  }
+
+  .navbar-brand{
+    font-size: 1rem;
+  }
+}
