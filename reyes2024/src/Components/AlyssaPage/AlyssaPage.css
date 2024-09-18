@@ -32,6 +32,22 @@
   font-size: 2rem;
 }
 
+.social-icons a {
+  color: red;
+}
+
+.social-icons a:hover {
+  color: darkred;
+}
+
+.social-icons i{
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+}
+
+
 /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
   .roboto-headers-ap {
@@ -45,12 +61,19 @@
   .nanum-headers-ap{
     font-size: 2.25rem;
   }
+
+  .social-icons i{
+    font-size: 23px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+  }
 }
 
 /* Large screens (≥ 992px) */
 @media (min-width: 992px) {
   .roboto-headers-ap {
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.5rem; 
   }
 
   .roboto-body-text-ap{
@@ -60,11 +83,18 @@
   .nanum-headers-ap{
     font-size: 3rem;
   }
+
+  .social-icons i{
+    font-size: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    
+  }
 }
 
-/* Custom class for responsive image */
 .img-responsive {
-  max-width: 100%; /* Scales image to fit container */
+  max-width: 100%; 
 }
 
 @media (max-width: 576px) {
@@ -84,7 +114,5 @@
     width: 100%; /* Full width on larger screens */
   }
 }
-
-
 
 
