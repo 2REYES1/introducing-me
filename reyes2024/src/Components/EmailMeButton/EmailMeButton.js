@@ -7,7 +7,7 @@ function EmailMeButton() {
   };
 
   return (
-    <button className="btn btn-primary roboto-mono-email-me roboto-body-text-email-me" onClick={handleEmailClick}>
+    <button className="btn roboto-mono-email-me roboto-body-text-email-me" onClick={handleEmailClick}>
       Contact Me
     </button>
   );
