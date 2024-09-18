@@ -22,14 +22,18 @@
 /* Base sizes for small screens */
 .roboto-headers-ap {
   font-size: 1rem; /* Adjust as needed */
+  font-style: italic;
+  font-weight: 500;
 }
 
 .roboto-body-text-ap {
   font-size: 0.75rem;
+  margin-bottom: 10px;
 }
 
 .nanum-headers-ap{
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .social-icons a {
@@ -47,6 +51,9 @@
   
 }
 
+.img-responsive {
+  width: 70%; 
+}
 
 /* Medium screens (≥ 768px) */
 @media (min-width: 768px) {
@@ -68,6 +75,11 @@
     margin-left: 10px;
     
   }
+
+  .img-responsive {
+    width: 90%; 
+  }
+
 }
 
 /* Large screens (≥ 992px) */
@@ -91,28 +103,12 @@
     margin-top: 5px;
     
   }
-}
 
-.img-responsive {
-  max-width: 100%; 
-}
-
-@media (max-width: 576px) {
   .img-responsive {
-    width: 50%; /* Smaller on extra small screens */
+    width: 100%; 
   }
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
-  .img-responsive {
-    width: 75%; /* Adjust size on small screens */
-  }
-}
 
-@media (min-width: 768px) {
-  .img-responsive {
-    width: 100%; /* Full width on larger screens */
-  }
-}
 
 
