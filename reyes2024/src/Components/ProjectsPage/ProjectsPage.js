@@ -6,7 +6,7 @@ function ProjectsPage() {
   return (
     <div className='container main-wrapper-proj-page' id="projects-page">
       <div className='row justify-content-center nanum-pen-proj-page nanum-headers-proj-page'>
-        Project Showcase
+        PROJECT SHOWCASE
       </div>
 
       <div className='row justify-content-center align-items-center'>
