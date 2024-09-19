@@ -68,8 +68,8 @@ p{
 
 .roboto-modal-body-text-proj-card {
     font-family: "Roboto Mono", monospace;
-    text-indent: 20px;
-    padding-left: 20px;
+    text-indent: -20px;
+    margin-left: 30px;
  }
 
 .roboto-modal-headers-proj-card{
