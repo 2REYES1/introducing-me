@@ -48,8 +48,9 @@ function ProjectCard(props) {
         <div className="modal show" tabIndex="-1" role="dialog" style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
           <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div className="modal-content">
-              <div className="modal-header">
+              <div className="modal-header d-flex justify-content-between">
                 <p className="modal-title roboto-modal-title-proj-card">{props.projectTitle}</p>
+                <p className="modal-date">{props.date}</p>
               </div>
 
               <div className="modal-body">
@@ -72,14 +73,6 @@ function ProjectCard(props) {
                       );
                     }
                   })}
-
-                  <p className='roboto-modal-headers-proj-card'>
-                    contributions:
-                  </p>
-                  {/* map through props.contributions to format each contribution */}
-                  {props.contributions && props.contributions.map((cont, index) => (
-                    <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}># {cont}</p>
-                  ))}
 
                   <p className='roboto-modal-headers-proj-card'>
                     languages and tools:
