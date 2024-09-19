@@ -12,6 +12,7 @@ function ProjectsPage() {
       <div className='row justify-content-center align-items-center'>
 
         <div className='col-lg-12 h-100 overflow-auto'>
+            {/* SNAP & SAFE */}
             <div className='mb-3'>
               <ProjectCard
                 projectTitle="snap & safe" 
@@ -21,6 +22,8 @@ function ProjectsPage() {
                 languagesAndTools={["React", "JavaScript", "Figma", "Google Gemini API"]}
               />
             </div>
+            
+            {/* PLAN-IT */}
             <div className='mb-3'>
               <ProjectCard
                 projectTitle="plan-it" 
@@ -31,9 +34,11 @@ function ProjectsPage() {
                   "collaborated in a group of 4",
                    "implemented real-time data synchronization and user authentication for the login page", "helped design the ui/ux", "implemented the ui/ux for the login page", "assisted in implementing the ui/ux for the other pages"
                 ]}
-                languagesAndTools={["React", "JavaScript", "Figma", "Google Places API"]}
+                languagesAndTools={["Firebase", "React", "JavaScript", "Figma", "Google Places API"]}
               />
             </div>
+
+            {/* ZOT CLASS MOBILE */}
             <div className='mb-3'>
               <ProjectCard
                 projectTitle="zot class mobile"
@@ -43,6 +48,8 @@ function ProjectsPage() {
                 languagesAndTools={["Flutter", "Dart", "Python", "Flask", "Peter Portal API"]}
               />
             </div>
+
+            {/* UCI SEARCH ENGINE */}
             <div className='mb-3'>
               <ProjectCard
                 projectTitle="uci search engine"
@@ -52,6 +59,8 @@ function ProjectsPage() {
                 languagesAndTools={["Python"]}
               />
             </div>
+
+            {/* VALORANT DISCORD BOT */}
             <div className='mb-3'>
               <ProjectCard
                 projectTitle="valorant discord bot"
