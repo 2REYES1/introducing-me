@@ -78,7 +78,13 @@ p{
     font-style: italic;
     font-weight: 500;
 }
-  
+
+.modal-date{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
 p .project-links{
     color: #99ca73;
     text-decoration: none;
@@ -166,5 +172,12 @@ p .project-links:hover{
     .roboto-modal-headers-proj-card{
         font-size: 1.2rem;
     }
+
+    .modal-date{
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        font-size: 1.3rem;
+    }
+    
 }
   
