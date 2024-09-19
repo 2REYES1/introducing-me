@@ -1,2 +1,1 @@
-# reyes2024
-personal portfolio website
+Alyssa Reyes's personal portfolio website.
