@@ -55,7 +55,7 @@ function ProjectsPage() {
                 projectTitle="uci search engine"
                 date="2023" 
                 summary="an efficient custom search engine tailored for UCI's webpages and resources"
-                moreInfo={["developed a search engine from the ground up that is capable of handling tens of thousands of documents or webpages in Python", "designed an inverted index with complex ranking and retrieval mechanisms to have a query time of under 300ms", "designed a web crawler to retrieve over ten thousand uci webpages"]} 
+                moreInfo={["developed a search engine from the ground up that is capable of handling over ten thousands of documents or webpages in Python", "designed an inverted index with complex ranking and retrieval mechanisms to have a query time of under 300ms", "designed a web crawler to retrieve over ten thousand uci webpages"]} 
                 languagesAndTools={["Python"]}
               />
             </div>
@@ -67,7 +67,7 @@ function ProjectsPage() {
                 date="2022" 
                 summary="a discord bot that provides expert insights on valorant agents"
                 moreInfo={["the discord bot provides users information about valorant gents via embedded messages, role managing, and message managing", "utilized the Hikari API for my Python framework and the third-party library Hikari Lightbulb for the command handlers"]} 
-                languagesAndTools={["Python", "Disccord API", "Hikari API", "Hikari Lightbulb"]}
+                languagesAndTools={["Python", "Discord API", "Hikari API", "Hikari Lightbulb"]}
               />
             </div>
         </div>
