@@ -20,12 +20,17 @@ function AlyssaPage() {
           {/* Social media icons */}
           <div className="social-icons mt-2">
             {/* LinkedIn Icon */}
-            <a href="https://www.linkedin.com/in/alyssalareyes" target="_blank" rel="noopener noreferrer" className="m-2">
+            <a href="https://www.linkedin.com/in/alyssalareyes" target="_blank" rel="noopener noreferrer" className="m-2" title="LinkedIn">
               <i className="fab fa-linkedin fa-2x"></i>
             </a>
             {/* GitHub Icon */}
-            <a href="https://github.com/2REYES1" target="_blank" rel="noopener noreferrer" className="m-2">
+            <a href="https://github.com/2REYES1" target="_blank" rel="noopener noreferrer" className="m-2" title="GitHub">
               <i className="fab fa-github fa-2x"></i>
+            </a>
+
+            {/* Resume Icon */}
+            <a href="./reyes_resume.pdf" download className="m-2" title="Download Resume">
+            <i className="fas fa-file-alt fa-2x"></i>
             </a>
           </div>
         </div>
