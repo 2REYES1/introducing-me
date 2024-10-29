@@ -5,7 +5,7 @@ import GreetingPage from './Components/GreetingPage/GreetingPage';
 import AlyssaPage from './Components/AlyssaPage/AlyssaPage';
 import MyNavBar from './Components/MyNavBar/MyNavBar';
 import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
-
+import FadeInSection from './Components/FadeInSection/FadeInSection';
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
         aboutHref={"#alyssa-page"}
         projectsHref={"#projects-page"}
       />
-      <GreetingPage />
-      <AlyssaPage />
-      <ProjectsPage />
+      <FadeInSection><GreetingPage /></FadeInSection>
+      <FadeInSection><AlyssaPage /></FadeInSection>
+      <FadeInSection><ProjectsPage /></FadeInSection>
     </div>
   );
 }
