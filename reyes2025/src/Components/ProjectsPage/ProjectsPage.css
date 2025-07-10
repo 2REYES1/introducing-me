@@ -1,0 +1,43 @@
+.nanum-pen-proj-page {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.roboto-mono-proj-page {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.main-wrapper-proj-page {
+    height: 100vh;
+    align-items: center;
+    /* display: flex; */
+    justify-content: center;
+  }
+
+.nanum-headers-proj-page{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-proj-page{
+    margin: 5px;
+}
+
+  /* Medium screens (≥ 768px) */
+@media (min-width: 768px){
+    .nanum-headers-proj-page{
+        font-size: 2.25rem;
+    }
+}
+
+/* Large screens (≥ 992px) */
+@media (min-width: 992px) {
+    .nanum-headers-proj-page{
+        font-size: 3.5rem;
+    }
+}

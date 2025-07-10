@@ -1,0 +1,184 @@
+.nanum-pen-proj-card {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.roboto-mono-proj-card {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.project-card-title{
+    width: 15rem;
+    border: 2px solid #585c97;
+    background-color: #9599ED;
+    border-radius: 10px;
+}
+
+.project-card-summary{
+    width: 25rem;
+    border: 2px solid #78afd4;
+    border-radius: 45px;
+    background-color: #b7d6ea;
+}
+
+.project-card-btn{
+    width: 6rem;
+    border: 1px solid #435139;
+    background-color: #C4DCB2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.project-card-btn:hover{
+    background-color: #73b043;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content {
+    background-color: #3C41B1; /* Deep purple background */
+    color: white; /* White text color */
+  }
+  
+
+/* Base sizes for small screens */
+.roboto-headers-proj-card {
+    font-size: 1rem; 
+    margin:2px;
+    font-weight: 700;
+}
+
+.roboto-modal-title-proj-card{
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+  
+.roboto-body-text-proj-card {
+   font-size: 0.75rem;
+   
+}
+
+.roboto-modal-body-text-proj-card {
+    font-family: "Roboto Mono", monospace;
+    text-indent: -20px;
+    margin-left: 30px;
+ }
+
+.roboto-modal-headers-proj-card{
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.modal-date{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+p .project-links{
+    color: #99ca73;
+    text-decoration: none;
+    font-style: italic;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.777);
+}
+
+p .project-links:hover{
+    color: #ffffff;
+}
+  
+  /* Medium screens (≥ 768px) */
+@media (min-width: 768px) {
+    .roboto-headers-proj-card{
+        font-size: 1.25rem; /* Adjust as needed */
+    }
+
+    .roboto-title-proj-card{
+        font-size: 1.4rem;
+    }
+
+    .roboto-modal-title-proj-card{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    
+    .roboto-body-text-proj-card{
+        font-size: 0.8rem;
+    }
+    
+
+    .project-card-title{
+        width: 15rem;
+        height: 10rem;
+    }
+    
+    .project-card-summary{
+        width: 15rem;
+        height: 10rem;
+        border-radius: 25px;
+    }
+
+    .project-card-btn{
+        width: 7rem;
+    }
+
+}
+  
+  /* Large screens (≥ 992px) */
+  @media (min-width: 992px) {
+    .roboto-headers-proj-card{
+      font-size: 1.5rem; /* Adjust as needed */
+    }
+
+    .roboto-title-proj-card{
+        font-size: 1.7rem;
+    }
+
+    .roboto-modal-title-proj-card{
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+  
+    .roboto-body-text-proj-card{
+      font-size: 1rem;
+    }
+  
+    .project-card-title{
+        width: 25rem;
+        height: 10rem;
+        margin: 10px;
+    }
+    
+    .project-card-summary{
+        width: 25rem;
+        height: 10rem;
+        border-radius: 25px;
+    }
+
+    .project-card-btn{
+        width: 10rem;
+        border-radius: 5px;
+    }
+
+    .roboto-modal-headers-proj-card{
+        font-size: 1.2rem;
+    }
+
+    .modal-date{
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        font-size: 1.3rem;
+    }
+    
+}
+  
