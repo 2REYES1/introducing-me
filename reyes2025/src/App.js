@@ -13,7 +13,8 @@ function App() {
         projectsHref={"#projects-page"}
       />
       <GreetingPage/>
-      {/* <FadeInSection><AlyssaPage /></FadeInSection>
+      <AlyssaPage />
+      {/* <FadeInSection></FadeInSection>
       <FadeInSection><ProjectsPage /></FadeInSection> */}
     </div>
   );
