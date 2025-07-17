@@ -37,11 +37,11 @@ function ProjectCard(props) {
             </button>
           </div>
           <div className="flex flex-row items-center justify-between w-full px-5">
-            <p className="text-left italic">
+            <p className="text-left italic text-md">
             INFORMATION:
             </p>
           </div>
-          <div className="flex flex-row px-5 overflow-y-auto">
+          <div className="flex flex-row px-5 overflow-y-auto text-md">
             <ul className="list-disc list-inside text-black">
               {props.projectInfo.map((point, index)=>
                 <li key={index}>
@@ -51,6 +51,16 @@ function ProjectCard(props) {
               )}
             </ul>
           </div>
+          <div className="flex flex-row px-5 py-2 text-sm">
+            <a 
+              href={props.projectLink} 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 border-4 border-blue-200">
+            view project
+            </a>  
+          </div>
+          
           
         </div>
 

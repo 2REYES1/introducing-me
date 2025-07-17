@@ -20,24 +20,10 @@ function ProjectsPage() {
           "Conducted monthly user testing and gathered feedback to refine the user interface",
           "Contributed to the successful launch of multiple games on itch.io"
         ]}
+        projectLink="https://github.com/2REYES1"
       >
       </ProjectCard>
-      <ProjectCard
-        projectTitle="Project 1 superlong title number"
-        projectDate="jan 2025-present"
-        projectInfo={[
-          "Designed and implemented UI for game menus, HUDs, and in-game interfaces using C# and Figma, optimizing player engagement and experience",
-          "Conducted monthly user testing and gathered feedback to refine the user interface",
-          "Contributed to the successful launch of multiple games on itch.io",
-          "Conducted monthly user testing and gathered feedback to refine the user interface",
-          "Contributed to the successful launch of multiple games on itch.io",
-          "Conducted monthly user testing and gathered feedback to refine the user interface",
-          "Contributed to the successful launch of multiple games on itch.io",
-          "Conducted monthly user testing and gathered feedback to refine the user interface",
-          "Contributed to the successful launch of multiple games on itch.io"
-        ]}
-      >
-      </ProjectCard>
+     
            
     </div>
   );
