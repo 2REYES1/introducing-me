@@ -3,97 +3,43 @@ import React, { useState } from 'react';
 
 
 function ProjectCard(props) {
-  const [showModal, setShowModal] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
-  // Function to toggle modal visibility
-  const handleShowModal = () => {
-    setShowModal(true);
-  };
+  const handleOpenInfo = () => {
+    setShowInfo(true);
+  }
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+  const handleCloseInfo = () => {
+    setShowInfo(false);
+  }
 
   return (
-    <>
-      {/* project card */}
-      <div className='row justify-content-center align-items-center'>
-        {/* project title and more info button */}
-        <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-title">
-          <div className="row align-items-center justify-content-center">
-            <p className='roboto-mono-proj-card text-center roboto-headers-proj-card'>
-              {props.projectTitle}
-            </p>
-            <button 
-              className='roboto-mono-proj-card roboto-body-text-proj-card project-card-btn' 
-              onClick={handleShowModal}>
-              more info  
-            </button>
-          </div>
-        </div>
-
-        {/* summary display*/}
-        <div className="col-sm-6 d-flex align-items-center justify-content-center project-card-summary">
-          <p className='row roboto-mono-proj-card align-items-center justify-content-center m-2 roboto-body-text-proj-card fst-italic'>
-            {props.summary}
-          </p>
+    <div id="project-card" className="flex flex-col items-center justify-center">
+      <div className="border-y-4 px-2 w-[350px]">
+        <p className="text-left text-3xl py-2">{props.projectTitle}</p>
+        <p className="text-right text-md italic pb-4">{props.projectDate}</p>
+        <div className="flex justify-end p-4">
+          <button 
+            onClick={handleOpenInfo} 
+            className="border-4 p-2">
+              more info
+          </button>
         </div>
       </div>
-
-      {/* 
-          pop up to show more information.
-          CODE FOR MODAL STARTS HERE
-      */}
-      {showModal && (
-        <div className="modal show" tabIndex="-1" role="dialog" style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div className="modal-content">
-              <div className="modal-header d-flex justify-content-between">
-                <p className="modal-title roboto-modal-title-proj-card">{props.projectTitle}</p>
-                <p className="modal-date">{props.date}</p>
-              </div>
-
-              <div className="modal-body">
-                  <p className='roboto-modal-headers-proj-card'>
-                    more info:
-                  </p>
-                  {/* map through props.moreInfo to format each information. */}
-                  {props.moreInfo && props.moreInfo.map((info, index) => {
-                    if (typeof info === 'string') {
-                      return (
-                        <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}>
-                          # {info}
-                        </p>
-                      );
-                    } else if (info.type === 'link') {
-                      return (
-                        <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}>
-                          # {info.text} --{'>'} <a className='project-links' href={info.url} target="_blank" rel="noopener noreferrer">{props.projectTitle}</a>
-                        </p>
-                      );
-                    }
-                  })}
-
-                  <p className='roboto-modal-headers-proj-card'>
-                    languages and tools:
-                  </p>
-                  {/* map through props.languagesAndTools to format each language and tool */}
-                  {props.languagesAndTools && props.languagesAndTools.map((lt, index) => (
-                    <p className='roboto-body-text-proj-card roboto-modal-body-text-proj-card' key={index}># {lt}</p>
-                  ))}
-              </div>
-
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary roboto-body-text-proj-card roboto-modal-body-text-proj-card" style={{ textIndent: 0, paddingLeft: '20px', paddingRight: '20px'}} onClick={handleCloseModal}>
-                  X
-                </button>
-              </div>
-            </div>
+        
+      {showInfo && (
+        <div className="fixed bottom-0 left-0 right-0 h-1/2 flex flex-col items-center justify-start z-50 bg-gray-200">
+          <div className="flex flex-row items-center justify-between w-full px-5">
+            <p className="text-lg font-bold">{props.projectTitle}</p>
+            <button onClick={handleCloseInfo} className="border-4 py-2">
+              X
+            </button>
           </div>
+          
         </div>
-      )}
 
-    </>
+      )}
+    </div>
   );
 }
 
