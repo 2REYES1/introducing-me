@@ -19,14 +19,13 @@ const db = getFirestore(app);
 const getProjects = async () => {
   try {
     const q = query(
-      collection(db, "Project"), // Querying the "Project" collection
-      orderBy("createdAt", "desc") // Order by creation date, descending
+      collection(db, "Project"), 
+      orderBy("createdAt", "desc") 
     );
-    const querySnapshot = await getDocs(q); // Execute the query
+    const querySnapshot = await getDocs(q); 
 
     const projects = [];
     querySnapshot.forEach((doc) => {
-      // Push each document's data along with its ID
       projects.push({ id: doc.id, ...doc.data() });
     });
     return projects;
