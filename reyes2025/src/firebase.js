@@ -11,14 +11,7 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCRuHrHuVk6XLhpwndYDjvJMr_dpWiQvDk",
-//   authDomain: "reyes-portfolio-76c63.firebaseapp.com",
-//   projectId: "reyes-portfolio-76c63",
-//   storageBucket: "reyes-portfolio-76c63.firebasestorage.app",
-//   messagingSenderId: "403653581793",
-//   appId: "1:403653581793:web:1aa42520606a63a66650a0"
-// };
+
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
