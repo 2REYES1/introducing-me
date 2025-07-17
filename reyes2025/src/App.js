@@ -14,8 +14,7 @@ function App() {
       />
       <GreetingPage/>
       <AlyssaPage />
-      {/* <FadeInSection></FadeInSection>
-      <FadeInSection><ProjectsPage /></FadeInSection> */}
+      <ProjectsPage />
     </div>
   );
 }
