@@ -36,6 +36,14 @@ function ProjectCard(props) {
               X
             </button>
           </div>
+          <div className="w-full px-5 items-center flex-wrap">
+            <span className="text-left italic text-md mr-2">
+              TECHNOLOGIES:
+            </span>
+            <span>
+              {props.projectTools.join(', ')}
+            </span>
+          </div>
           <div className="flex flex-row items-center justify-between w-full px-5">
             <p className="text-left italic text-md">
             INFORMATION:

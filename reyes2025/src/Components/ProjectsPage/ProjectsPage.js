@@ -21,6 +21,7 @@ function ProjectsPage() {
           "Contributed to the successful launch of multiple games on itch.io"
         ]}
         projectLink="https://github.com/2REYES1"
+        projectTools={["firebase", "react", "aws", "supabse", "javascript", "figma", "vscode", "c#"]}
       >
       </ProjectCard>
      
