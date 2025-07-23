@@ -6,7 +6,7 @@ import FadeInSection from './Components/FadeInSection/FadeInSection';
 
 function App() {
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="w-full m-0 flex flex-col items-center justify-center min-h-screen w-full">
       <MyNavBar 
         greetingHref={"#greeting-page"} 
         aboutHref={"#alyssa-page"}
