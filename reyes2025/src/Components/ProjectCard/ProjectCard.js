@@ -51,7 +51,7 @@ function ProjectCard(props) {
               INFORMATION:
               </p>
             </div>
-            <div className="flex flex-row px-5 text-md pb-8">
+            <div className="flex flex-row px-5 text-md pb-2">
               <ul className="list-disc list-inside text-black">
                 {props.projectInfo.map((point, index)=>
                   <li key={index}>
