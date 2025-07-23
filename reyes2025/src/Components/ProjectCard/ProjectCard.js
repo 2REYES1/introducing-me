@@ -15,7 +15,7 @@ function ProjectCard(props) {
   }
 
   return (
-    <div id="project-card" className="flex flex-col items-center justify-center py-2 font-mono">
+    <div id="project-card" className="flex flex-col items-center justify-center py-2 font-mono text-white">
       <div className="border-y-4 px-2 w-[350px]">
         <p className="text-left text-3xl py-2">{props.projectTitle}</p>
         <p className="text-left text-lg italic">{props.projectSponsor}</p>
@@ -30,14 +30,14 @@ function ProjectCard(props) {
       </div>
         
       {showInfo && (
-        <div className="fixed bottom-0 left-0 right-0 h-1/2 flex flex-col items-center justify-start z-50 bg-gray-200">
+        <div className="fixed bottom-0 left-0 right-0 h-1/2 flex flex-col items-center justify-start z-50 bg-gray-200 text-black">
           <div className="flex flex-row items-center justify-between w-full px-5">
             <p className="text-xl font-bold">{props.projectTitle}</p>
             <button onClick={handleCloseInfo} className="border-4 py-2">
               X
             </button>
           </div>
-          <div className="overflow-y-auto">
+          <div className="overflow-y-auto w-full">
             <div className="w-full px-5 items-center flex-wrap pb-4">
               <span className="text-left italic text-md mr-2">
                 TECHNOLOGIES:
@@ -63,8 +63,9 @@ function ProjectCard(props) {
             </div>
 
           </div>
+          
 
-          <div className="flex flex-row px-5 py-2 text-sm">
+          <div className="flex flex-row px-5 py-2 text-sm mt-auto w-full flex justify-center md:justify-end">
             <a 
               href={props.projectLink} 
               target="_blank"
