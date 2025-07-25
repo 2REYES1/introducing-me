@@ -12,10 +12,10 @@ function GreetingPage() {
           </p>
         </div>
         <div className="text-center">
-          <p className="text-7xl font-boldh md:text-9xl text-[#C9E843] font-Bebas">
+          <p className="text-7xl font-bold md:text-9xl lg:text-[170px] text-[#C9E843] font-Bebas">
             ALYSSA REYES
           </p>
-          <p className="text-sm md:text-md italic font-mono">
+          <p className="text-sm md:text-base italic font-mono">
             a uc irvine computer science graduate who loves the endless knowledge that comes with tech
           </p>
         </div> 
