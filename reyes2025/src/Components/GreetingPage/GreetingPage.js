@@ -4,18 +4,18 @@ import EmailMeButton from '../EmailMeButton/EmailMeButton';
 
 function GreetingPage() {
   return (
-    <div id="greeting-page" className="flex flex-col w-full items-center justify-center min-h-screen bg-black text-white">
+    <div id="greeting-page" className="flex flex-col w-full items-center justify-center min-h-screen bg-black text-white ">
       <div className="flex flex-col items-center justify-center p-4">
-        <div className="text-left font-mono w-full">
-          <p className="text-sm">
+        <div className="text-left w-full">
+          <p className="text-lg md:text-2xl font-Inter">
             hello, i'm
           </p>
         </div>
-        <div className="text-center font-mono">
-          <p className="text-5xl font-bold mb-2 md:text-7xl text-[#C9E843]">
+        <div className="text-center">
+          <p className="text-7xl font-boldh md:text-9xl text-[#C9E843] font-Bebas">
             ALYSSA REYES
           </p>
-          <p className="text-sm italic">
+          <p className="text-sm md:text-md italic font-mono">
             a uc irvine computer science graduate who loves the endless knowledge that comes with tech
           </p>
         </div> 
