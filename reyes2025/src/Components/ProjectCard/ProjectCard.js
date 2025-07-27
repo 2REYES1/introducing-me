@@ -16,7 +16,7 @@ function ProjectCard(props) {
 
   return (
     <div id="project-card" className="flex flex-col items-center justify-center py-2 font-mono text-white">
-      <div className="border-y-4 px-2 w-[350px]">
+      <div className="border-y-4 px-2 w-full">
         <p className="text-left text-2xl pt-2 uppercase font-Bebas">{props.projectTitle}</p>
         <p className="text-left text-sm italic font-Inter">{props.projectSponsor}</p>
         <p className="text-right text-sm italic pb-4">{props.projectDate}</p>

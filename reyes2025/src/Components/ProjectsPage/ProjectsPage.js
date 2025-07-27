@@ -29,18 +29,27 @@ function ProjectsPage() {
   return (
     <div id="projects-page" className="flex flex-col items-center justify-center min-h-screen w-full p-4 bg-black text-white">
       <p className="text-7xl md:text-8xl lg:text-9xl text-[#C9E843] font-bold py-3 font-Bebas">PROJECT SHOWCASE</p>
-      {projects.map((project) => (
-        <ProjectCard
-        key={project.id}
-        projectTitle={project.projectTitle}
-        projectSponsor={project.projectSponsor}
-        projectDate={project.projectDate}
-        projectInfo={project.projectInfo}
-        projectLink={project.projectLink}
-        projectTools={project.projectTools}
-      >
-      </ProjectCard>
-      ))}
+
+      {projects.length === 0 ?(
+        <p>No projects found.</p>
+      ) : (
+        <div className="grid grid-cols-1 w-full md:grid-cols-2 md:gap-4 max-w-6xl md:mx-auto md:px-4">
+          {projects.map((project) => (
+                  <ProjectCard
+                  key={project.id}
+                  projectTitle={project.projectTitle}
+                  projectSponsor={project.projectSponsor}
+                  projectDate={project.projectDate}
+                  projectInfo={project.projectInfo}
+                  projectLink={project.projectLink}
+                  projectTools={project.projectTools}
+                >
+                </ProjectCard>
+                ))}
+        </div>
+      )}
+
+      
      
            
     </div>
