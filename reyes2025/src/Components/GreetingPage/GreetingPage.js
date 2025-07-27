@@ -1,6 +1,7 @@
 import './GreetingPage.css';
 import * as React from 'react';
 import EmailMeButton from '../EmailMeButton/EmailMeButton';
+import FadeInSection from '../FadeInSection/FadeInSection.js';
 
 function GreetingPage() {
   return (
@@ -12,9 +13,12 @@ function GreetingPage() {
           </p>
         </div>
         <div className="text-center">
-          <p className="text-7xl font-bold md:text-9xl lg:text-[170px] text-[#C9E843] font-Bebas">
+          <FadeInSection>
+            <p className="text-7xl font-bold md:text-9xl lg:text-[170px] text-[#C9E843] font-Bebas">
             ALYSSA REYES
           </p>
+          </FadeInSection>
+          
           <p className="text-sm md:text-base italic font-mono">
             a uc irvine computer science graduate who loves the endless knowledge that comes with tech
           </p>
