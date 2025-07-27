@@ -28,7 +28,7 @@ function ProjectsPage() {
 
   return (
     <div id="projects-page" className="flex flex-col items-center justify-center min-h-screen w-full p-4 bg-black text-white">
-      <p className="text-7xl md:text-8xl lg:text-9xl text-[#C9E843] font-bold py-10 font-Bebas">PROJECT SHOWCASE</p>
+      <p className="text-7xl md:text-8xl lg:text-9xl text-[#C9E843] font-bold py-3 font-Bebas">PROJECT SHOWCASE</p>
       {projects.map((project) => (
         <ProjectCard
         key={project.id}
