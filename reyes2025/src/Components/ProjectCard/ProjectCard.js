@@ -17,13 +17,13 @@ function ProjectCard(props) {
   return (
     <div id="project-card" className="flex flex-col items-center justify-center py-2 font-mono text-white">
       <div className="border-y-4 px-2 w-[350px]">
-        <p className="text-left text-3xl pt-2 uppercase font-bold font-Inter">{props.projectTitle}</p>
-        <p className="text-left text-lg italic font-Inter">{props.projectSponsor}</p>
-        <p className="text-right text-md italic pb-4">{props.projectDate}</p>
+        <p className="text-left text-2xl pt-2 uppercase font-Bebas">{props.projectTitle}</p>
+        <p className="text-left text-sm italic font-Inter">{props.projectSponsor}</p>
+        <p className="text-right text-sm italic pb-4">{props.projectDate}</p>
         <div className="flex justify-end p-4">
           <button 
             onClick={handleOpenInfo} 
-            className="border-4 py-2 px-5 font-bold font-Inter uppercase">
+            className="border-2 py-2 px-5 text-xs font-bold font-Inter uppercase">
               more info
           </button>
         </div>
