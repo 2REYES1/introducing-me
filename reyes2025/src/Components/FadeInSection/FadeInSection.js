@@ -1,35 +1,39 @@
-import React, { useRef, useState, useEffect } from 'react';
-import './FadeInSection.css';
+import React, { useState, useEffect, useRef } from 'react';
 
-function FadeInSection({ children }) {
-  const [isSectionVisible, setIsSectionVisible] = useState(false);
-  const currentPageSectionRef = useRef(null);
+function FadeInSection(props) {
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef();
 
   useEffect(() => {
-    const intersectionObserver = new IntersectionObserver(
-      ([entry]) => {
-        setIsSectionVisible(entry.isIntersecting);
-      },
-      { threshold: 0.5 } 
-    );
+    const observer = new IntersectionObserver(entries => {
+      setVisible(entries[0].isIntersecting);
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
 
-    if (currentPageSectionRef.current) {
-      intersectionObserver.observe(currentPageSectionRef.current);
+    if(domRef.current){
+      observer.observe(domRef.current);
     }
 
     return () => {
-      if (currentPageSectionRef.current) {
-        intersectionObserver.unobserve(currentPageSectionRef.current);
+      if (domRef.current) {
+        observer.unobserve(domRef.current);
       }
     };
+
   }, []);
 
   return (
-    <div
-      ref={currentPageSectionRef}
-      className={`fade-in-section ${isSectionVisible ? 'fade-in' : 'fade-out'}`}
-    >
-      {children}
+    <div 
+      ref={domRef}
+      className={`
+        transition-all duration-700 ease-in-out transform
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+        ${props.className || ''}
+      `}>
+      {props.children}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import './AlyssaPage.css';
 import React from 'react';
 import AlyssaPicture from './imgs/ally.JPG';
+import FadeInSection from '../FadeInSection/FadeInSection.js';
 
 
 
@@ -14,16 +15,19 @@ function AlyssaPage() {
           <p className="text-7xl text-left font-bold lg:text-9xl text-[#C9E843] font-Bebas">ABOUT ME</p>
           <p className="text-sm md:text-base text-left italic">uc irvine computer science co '25</p>
           <p className="text-sm md:text-base mb-[2rem] text-left italic">she/her</p>
-          <div className="text-sm space-y-2">
-            <div className="text-[#82C3FF]">
-              <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">INTERESTS:</p>
-              <p className="text-right md:text-base lg:ml-[10rem]">front-end web development, full-stack web development, machine learning, ui/ux design, game development, game design, data science</p>              
+          <FadeInSection>
+            <div className="text-sm space-y-2">
+              <div className="text-[#82C3FF]">
+                <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">INTERESTS:</p>
+                <p className="text-right md:text-base lg:ml-[10rem]">front-end web development, full-stack web development, machine learning, ui/ux design, game development, game design, data science</p>              
+              </div>
+              <div className="text-[#A477FF]">
+                <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">HOBBIES:</p>
+                <p className="text-right md:text-base lg:ml-[10rem]">basketball, volleyball, photography, filmmaking, video editing, video games</p>              
+              </div>
             </div>
-            <div className="text-[#A477FF]">
-              <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">HOBBIES:</p>
-              <p className="text-right md:text-base lg:ml-[10rem]">basketball, volleyball, photography, filmmaking, video editing, video games</p>              
-            </div>
-          </div>
+          </FadeInSection>
+          
         </div>
 
       </div>
