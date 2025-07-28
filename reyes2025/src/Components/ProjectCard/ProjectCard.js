@@ -1,5 +1,6 @@
 import './ProjectCard.css';
 import React, { useState } from 'react';
+import {motion} from 'framer-motion';
 
 
 function ProjectCard(props) {
@@ -20,11 +21,17 @@ function ProjectCard(props) {
         <p className="text-left text-sm italic font-Inter">{props.projectSponsor}</p>
         <p className="text-right text-sm italic pb-4">{props.projectDate}</p>
         <div className="flex justify-end p-4">
-          <button 
+          <motion.button 
+            whileHover={{scale:1.1, boxShadow: "0px, 8px, 15px, #FFFFFF"}}
+            transition={{
+              type:"spring",
+              stiffness:300,
+              damping:10
+            }}
             onClick={onOpenInfo} 
             className="border-2 py-2 px-5 text-xs font-bold font-Inter uppercase bg-[#A477FF]">
               more info
-          </button>
+          </motion.button>
         </div>
       </div>
         

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import {getProjects} from '../../firebase.js';
 import FadeInSection from '../FadeInSection/FadeInSection.js';
+import {motion} from 'framer-motion';
 
 
 function ProjectsPage() {
@@ -63,14 +64,18 @@ function ProjectsPage() {
 
   return (
     <div id="projects-page" className="flex flex-col items-center justify-center min-h-screen w-full p-4 bg-black text-white">
-      <FadeInSection>
-        <p className="text-7xl md:text-8xl lg:text-9xl text-[#C9E843] font-bold py-3 font-Bebas">PROJECT SHOWCASE</p>
-        {projects.length === 0 ?(
-                <p>No projects found.</p>
-              ) : (
-                <div className="grid grid-cols-1 w-full md:grid-cols-2 md:gap-4 max-w-6xl md:mx-auto md:px-4">
-                  {projects.map((project) => (
-                          <ProjectCard
+      
+      <p className="text-7xl md:text-8xl lg:text-9xl text-[#C9E843] font-bold py-3 font-Bebas">PROJECT SHOWCASE</p>
+      {projects.length === 0 ?(
+              <p>No projects found.</p>
+            ) : (
+              <motion.div
+              whileInView={{ opacity: 1}}
+              initial={{ opacity: 0}}
+              transition={{duration: 0.6}}
+              className="grid grid-cols-1 w-full md:grid-cols-2 md:gap-4 max-w-6xl md:mx-auto md:px-4">
+                {projects.map((project) => (
+                        <ProjectCard
                           key={project.id}
                           projectTitle={project.projectTitle}
                           projectSponsor={project.projectSponsor}
@@ -81,16 +86,20 @@ function ProjectsPage() {
                           onOpenInfo={() => handleOpenProjectPopup(project)}
                         >
                         </ProjectCard>
-                        ))}
-                </div>
-              )}
-      </FadeInSection>
+                      ))}
+              </motion.div>
+            )}
+      
 
       {showProjectPopup && selectedProject && (
-        <div className="fixed bottom-0 left-0 right-0 h-3/4 md:h-1/2 flex flex-col items-center justify-start z-50 bg-gray-200 text-black">
+        <motion.div 
+        whileInView={{opacity: 1, y: 1}}
+        initial={{opacity: 0, y: 200}}
+        transition={{duration: 0.8, ease: "easeOut"}}
+        className="fixed bottom-0 left-0 right-0 h-3/4 md:h-1/2 flex flex-col items-center justify-start z-100 bg-gray-200 text-black">
           <div className="flex flex-row items-center justify-between w-full py-3 px-5 font-Bebas">
             <p className="text-3xl md:text-5xl font-bold">{selectedProject.projectTitle}</p>
-            <button onClick={handleCloseProjectPopup} className="border-4 py-2 text-2xl ">
+            <button onClick={handleCloseProjectPopup} className="border-4 py-2 px-4 text-2xl ">
               X
             </button>
           </div>
@@ -123,17 +132,23 @@ function ProjectsPage() {
           
 
           <div className="flex flex-row px-5 py-2 text-sm mt-auto w-full flex justify-center md:justify-end">
-            <a 
+            <motion.button
+              whileHover={{scale:1.1, boxShadow: "0px, 8px, 15px, #FFFFFF"}}
+                transition={{
+                type:"spring",
+                stiffness:300,
+                damping:10
+              }}
               href={selectedProject.projectLink} 
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 border-4 border-black bg-[#C9E843] font-bold font-Inter uppercase">
             view project
-            </a>  
+            </motion.button>  
           </div>
           
           
-        </div>
+        </motion.div>
       )}
 
       
