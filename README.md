@@ -11,6 +11,7 @@ When I'm not diving deep into code, you'll likely find me on a basketball court 
 ### Tools & Technology Used For This Project
 * React
 * JavaScript
+* framer-motion
 * Node.js
 * Firebase
 * Github Pages
