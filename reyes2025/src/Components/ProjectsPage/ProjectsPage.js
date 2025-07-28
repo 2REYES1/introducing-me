@@ -87,7 +87,7 @@ function ProjectsPage() {
       </FadeInSection>
 
       {showProjectPopup && selectedProject && (
-        <div className="fixed bottom-0 left-0 right-0 h-1/2 flex flex-col items-center justify-start z-50 bg-gray-200 text-black">
+        <div className="fixed bottom-0 left-0 right-0 h-3/4 md:h-1/2 flex flex-col items-center justify-start z-50 bg-gray-200 text-black">
           <div className="flex flex-row items-center justify-between w-full py-3 px-5 font-Bebas">
             <p className="text-3xl md:text-5xl font-bold">{selectedProject.projectTitle}</p>
             <button onClick={handleCloseProjectPopup} className="border-4 py-2 text-2xl ">
@@ -127,7 +127,7 @@ function ProjectsPage() {
               href={selectedProject.projectLink} 
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 border-4 border-blue-200 font-bold font-Inter uppercase">
+              className="px-5 py-2 border-4 border-black bg-[#C9E843] font-bold font-Inter uppercase">
             view project
             </a>  
           </div>

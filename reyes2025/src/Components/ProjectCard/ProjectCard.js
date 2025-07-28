@@ -22,7 +22,7 @@ function ProjectCard(props) {
         <div className="flex justify-end p-4">
           <button 
             onClick={onOpenInfo} 
-            className="border-2 py-2 px-5 text-xs font-bold font-Inter uppercase">
+            className="border-2 py-2 px-5 text-xs font-bold font-Inter uppercase bg-[#A477FF]">
               more info
           </button>
         </div>
