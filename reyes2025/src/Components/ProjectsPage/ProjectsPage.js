@@ -132,7 +132,7 @@ function ProjectsPage() {
           
 
           <div className="flex flex-row px-5 py-2 text-sm mt-auto w-full flex justify-center md:justify-end">
-            <motion.button
+            <motion.a
               whileHover={{scale:1.1, boxShadow: "0px, 8px, 15px, #FFFFFF"}}
                 transition={{
                 type:"spring",
@@ -144,7 +144,7 @@ function ProjectsPage() {
               rel="noopener noreferrer"
               className="px-5 py-2 border-4 border-black bg-[#C9E843] font-bold font-Inter uppercase">
             view project
-            </motion.button>  
+            </motion.a>  
           </div>
           
           
