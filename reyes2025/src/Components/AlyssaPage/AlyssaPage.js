@@ -2,12 +2,19 @@ import './AlyssaPage.css';
 import React from 'react';
 import AlyssaPicture from './imgs/ally.JPG';
 import FadeInSection from '../FadeInSection/FadeInSection.js';
-import {motion} from 'framer-motion';
+import {motion, spring} from 'framer-motion';
 
 
 
 
 function AlyssaPage() {
+  const transBouncy = {
+    duration: 0.6,
+    type: spring,
+    stiffness: 75,
+    damping: 10,
+    mass: 1
+  }
   return (
     <div id="alyssa-page" className="min-h-screen w-full flex flex-col items-center justify-center bg-black text-white">
       <div className="flex flex-col md:flex md:flex-row md:m-4 md:space-x-4 items-center justify-center p-2 max-w-7xl">
@@ -25,7 +32,8 @@ function AlyssaPage() {
             <motion.div 
               whileInView={{ opacity: 1, x: 0}}
               initial={{ opacity: 0, x: -50}}
-              transition={{duration: 0.6}}
+              transition={transBouncy}
+              
               className="text-[#82C3FF]">
               <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">INTERESTS:</p>
               <p className="text-right md:text-base lg:ml-[10rem]">front-end web development, full-stack web development, machine learning, ui/ux design, game development, game design, data science</p>              
@@ -33,7 +41,7 @@ function AlyssaPage() {
             <motion.div  
               whileInView={{ opacity: 1, x: 0}}
               initial={{ opacity: 0, x: -50}}
-              transition={{duration: 0.6,}}
+              transition={transBouncy}
               className="text-[#A477FF]">
               <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">HOBBIES:</p>
               <p className="text-right md:text-base lg:ml-[10rem]">basketball, volleyball, photography, filmmaking, video editing, video games</p>              
