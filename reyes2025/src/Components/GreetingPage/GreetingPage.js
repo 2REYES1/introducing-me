@@ -2,7 +2,7 @@ import './GreetingPage.css';
 import * as React from 'react';
 import EmailMeButton from '../EmailMeButton/EmailMeButton';
 import FadeInSection from '../FadeInSection/FadeInSection.js';
-import {motion} from 'framer-motion';
+import {motion, spring} from 'framer-motion';
 
 function GreetingPage() {
   return (
@@ -14,12 +14,17 @@ function GreetingPage() {
           </p>
         </div>
         <div className="text-center">
-         
+          
           <motion.p drag dragSnapToOrigin
-            whileInView={{ opacity: 1, scale: 1}}
             initial={{ opacity: 0, scale: 1.2}}
-            transition={{duration: 0.6}}
-            whileHover={{scale:[1,0.7]}}
+            whileInView={{ opacity: 1, scale: 1}}
+            whileHover={{scale: 0.9}}
+            transition={{
+              type: spring,
+              stiffness: 75,
+              damping: 7,
+              mass: 1
+            }}
             className="text-7xl font-bold md:text-9xl lg:text-[170px] text-[#C9E843] font-Bebas">
             ALYSSA REYES
           </motion.p>
