@@ -5,7 +5,7 @@ function MyNavBar(props){
     const{
       githubLink ="https://github.com/2REYES1",
       linkedInLink="https://www.linkedin.com/in/alyssalareyes/",
-      resumeLink="./Alyssa_Reyes-ResumeCS.pdf"
+      resumeLink="./Alyssa_Reyes-Resume1223.pdf"
     } = props;
 
     return(

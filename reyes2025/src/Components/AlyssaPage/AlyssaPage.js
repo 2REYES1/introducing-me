@@ -36,7 +36,7 @@ function AlyssaPage() {
               
               className="text-[#82C3FF]">
               <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">INTERESTS:</p>
-              <p className="text-right md:text-base lg:ml-[10rem]">front-end web development, full-stack web development, machine learning, ui/ux design, game development, game design, data science</p>              
+              <p className="text-right md:text-base lg:ml-[10rem]">front-end web development, full-stack web development, machine learning, data science, ui/ux design, game development</p>              
             </motion.div>
             <motion.div  
               whileInView={{ opacity: 1, x: 0}}
@@ -44,7 +44,7 @@ function AlyssaPage() {
               transition={transBouncy}
               className="text-[#A477FF]">
               <p className="font-bold text-left sm:text-left italic text-lg lg:text-xl font-Inter">HOBBIES:</p>
-              <p className="text-right md:text-base lg:ml-[10rem]">basketball, volleyball, photography, filmmaking, video editing, video games</p>              
+              <p className="text-right md:text-base lg:ml-[10rem]">basketball, golf, volleyball, photography, filmmaking, video editing, video games</p>              
             </motion.div >
           </div>
           
