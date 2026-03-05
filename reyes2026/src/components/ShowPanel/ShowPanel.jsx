@@ -28,7 +28,7 @@ function ShowPanel() {
   };
 
   return (
-    <div className="w-full max-w-[500px] border-4 border-black bg-gray-300">
+    <div className="w-full max-w-[500px] border-4 border-black bg-gray-300 h-full">
 
       {/* Top Bar */}
       <div className="bg-[#6D6D6D] border-b-4 border-black p-2 relative">
@@ -61,7 +61,7 @@ function ShowPanel() {
       </div>
 
       {/* Content Area */}
-      <div className="h-[350px] bg-gray-300 p-4">
+      <div className="max-h-[500px] bg-gray-300 p-4">
         {renderPanel()}
       </div>
 

@@ -59,7 +59,7 @@ function LandingPage() {
               </div>
             </div>
 
-            <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black]">
+            <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] h-full mb-10">
               <ShowPanel/>
             </div>
 
