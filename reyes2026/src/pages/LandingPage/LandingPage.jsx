@@ -29,8 +29,29 @@ function LandingPage() {
                     
                 </div>
             </div>
-            <div id="about-me-portion" className="my-2">
-                hello
+            <div class="mt-2 flex items-center justify-center w-full">
+              <div class="grid grid-cols-6 grid-rows-4 gap-0 w-[95%] bg-black ">
+
+                <h1 class="col-start-3 col-span-3 row-start-1 
+                          font-['Silkscreen'] text-3xl 
+                          translate-y-3 z-20">
+                  ABOUT ME
+                </h1>
+                
+                <div class="col-start-2 col-span-4 row-start-2 row-span-2
+                            bg-gray-300 border-4 border-black 
+                            shadow-[6px_6px_0_black] p-8">
+                  <p class="font-['Orbit'] text-sm text-center mt-4">
+                    Hello!
+                  </p>
+                </div>
+                
+                <div class="col-start-1 col-span-2 row-start-1 row-span-3
+                            bg-gray-300 border-4 border-black 
+                            rounded-xl z-10">
+                </div>
+
+              </div>
             </div>
         </div>
       )}
