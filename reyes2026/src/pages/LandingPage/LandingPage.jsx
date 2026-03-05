@@ -21,7 +21,7 @@ function LandingPage() {
 
           <div className="flex flex-col items-center justify-center h-screen w-[95%] max-w-[400px] mx-auto">
             {/* HEADER PORTION */}
-            <div id="header-portion" className="w-[95%]">
+            <div id="header-portion" className="w-[95%] mt-10">
                 <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: 3 March 2026</p>
                 <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 px-4 shadow-[0.375rem_0.375rem_0_black]">
                     ALYRE.DEV
