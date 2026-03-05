@@ -17,43 +17,51 @@ function LandingPage() {
       {/* Main landing page content */}
       {entered && (
         <div className="flex flex-col items-center justify-center h-screen">
+
+          <div className="flex flex-col items-center justify-center h-screen w-[95%] max-w-[400px] mx-auto">
+            {/* HEADER PORTION */}
             <div id="header-portion" className="w-[95%]">
                 <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: 3 March 2026</p>
-                <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 px-4">
+                <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 px-4 shadow-[0.375rem_0.375rem_0_black]">
                     ALYRE.DEV
                 </div>
-                <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-md">
+                <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-[0.375rem_0.375rem_0_black]">
                     <p className="drop-shadow-lg font-bold">
                        <span>LINKEDIN</span> | <span>GITHUB</span> | <span>RESUME</span>  
                     </p>
                     
                 </div>
             </div>
-            <div class="mt-2 flex items-center justify-center w-full">
-              <div class="grid grid-cols-6 grid-rows-4 gap-0 w-[95%] bg-black ">
 
-                <h1 class="col-start-3 col-span-3 row-start-1 
-                          font-['Silkscreen'] text-3xl 
-                          translate-y-3 z-20">
-                  ABOUT ME
-                </h1>
-                
-                <div class="col-start-2 col-span-4 row-start-2 row-span-2
-                            bg-gray-300 border-4 border-black 
-                            shadow-[6px_6px_0_black] p-8">
-                  <p class="font-['Orbit'] text-sm text-center mt-4">
-                    Hello!
-                  </p>
+            {/* ABOUT ME PORTION */}
+            <div className="mt-3 flex items-center justify-center w-full min-h-[15%] max-h-[15%]">
+              <div className="grid grid-cols-[1.5fr_3fr] w-[95%] h-full">
+
+                <div className="bg-gray-300 border-4 border-black z-10 relative w-[115%] h-[120%]">
+                </div>
+
+                <div className="">
+                  <h1 className="font-['Silkscreen'] text-[#B2D365] flex items-center justify-center text-[2.5rem] relative z-50 translate-x-2 [text-shadow:.2rem_.2rem_0_black] [-webkit-text-stroke:.1rem_black] font-medium">
+    
+                    ABOUT ME
+                  </h1>
+                  
+                  <div className="bg-gray-300 border-black relative -translate-y-6 h-[110%] flex items-center justify-center">
+                    <p className="font-['Orbit'] text-sm text-center text-black">
+                      Hello!
+                    </p>
+                  </div>
+                 
                 </div>
                 
-                <div class="col-start-1 col-span-2 row-start-1 row-span-3
-                            bg-gray-300 border-4 border-black 
-                            rounded-xl z-10">
-                </div>
+                
 
               </div>
             </div>
+          </div>
+
         </div>
+        
       )}
 
     </div>
