@@ -26,7 +26,7 @@ function LandingPage() {
                 <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 px-4 shadow-[0.375rem_0.375rem_0_black]">
                     ALYRE.DEV
                 </div>
-                <div className="font-['Orbit'] text-center bg-gray-500 text-black shadow-[0.375rem_0.375rem_0_black]">
+                <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-[0.375rem_0.375rem_0_black]">
                     <p className="drop-shadow-lg font-bold">
                        <span>LINKEDIN</span> | <span>GITHUB</span> | <span>RESUME</span>  
                     </p>

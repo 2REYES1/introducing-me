@@ -1,4 +1,8 @@
 import { useState } from "react";
+import ExperiencePanel from "../ExperiencePanel/ExperiencePanel.jsx";
+import NewsPanel from "../NewsPanel/NewsPanel.jsx";
+import ProjectsPanel from "../ProjectsPanel/ProjectsPanel.jsx"; 
+
 
 function ShowPanel() {
   const [open, setOpen] = useState(false);
@@ -11,11 +15,23 @@ function ShowPanel() {
     setOpen(false);
   };
 
+  const renderPanel = () => {
+    switch (selected) {
+      case "Experience":
+        return <ExperiencePanel />;
+      case "News":
+        return <NewsPanel />;
+      case "Projects":
+      default:
+        return <ProjectsPanel />;
+    }
+  };
+
   return (
     <div className="w-full max-w-[500px] border-4 border-black bg-gray-300">
 
       {/* Top Bar */}
-      <div className="bg-gray-500 border-b-4 border-black p-2 relative">
+      <div className="bg-[#6D6D6D] border-b-4 border-black p-2 relative">
 
         {/* Dropdown */}
         <div className="relative inline-block">
@@ -45,7 +61,9 @@ function ShowPanel() {
       </div>
 
       {/* Content Area */}
-      <div className="h-[350px] bg-gray-300"></div>
+      <div className="h-[350px] bg-gray-300 p-4">
+        {renderPanel()}
+      </div>
 
     </div>
   );
