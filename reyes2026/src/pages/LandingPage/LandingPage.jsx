@@ -17,7 +17,7 @@ function LandingPage() {
       {/* Main landing page content */}
       {entered && (
         <div className="flex flex-col items-center justify-center h-screen">
-            <div className="w-[95%]">
+            <div id="header-portion" className="w-[95%]">
                 <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: 3 March 2026</p>
                 <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 px-4">
                     ALYRE.DEV
@@ -28,6 +28,9 @@ function LandingPage() {
                     </p>
                     
                 </div>
+            </div>
+            <div id="about-me-portion" className="my-2">
+                hello
             </div>
         </div>
       )}
