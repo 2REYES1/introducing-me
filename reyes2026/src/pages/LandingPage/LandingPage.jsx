@@ -34,19 +34,18 @@ function LandingPage() {
             </div>
 
             {/* ABOUT ME PORTION */}
-            <div className="mt-3 flex items-center justify-center w-full min-h-[15%] max-h-[15%]">
+            <div className="mt-3 flex items-center justify-center w-full min-h-[15%] max-h-[15%] mb-12">
               <div className="grid grid-cols-[1.5fr_3fr] w-[95%] h-full">
 
-                <div className="bg-gray-300 border-4 border-black z-10 relative w-[115%] h-[120%]">
+                <div id="profile-pic-box" className="bg-gray-300 border-4 border-black z-10 relative w-[115%] h-[120%] shadow-[0.2rem_0.2rem_0_black]">
                 </div>
 
-                <div className="">
-                  <h1 className="font-['Silkscreen'] text-[#B2D365] flex items-center justify-center text-[2.5rem] relative z-50 translate-x-2 [text-shadow:.2rem_.2rem_0_black] [-webkit-text-stroke:.1rem_black] font-medium">
-    
+                <div id="about-me-box" className="">
+                  <h1 className="font-['Silkscreen'] text-[#B2D365] flex items-center justify-center text-[2.5rem] relative z-50 translate-x-2 -translate-y-3 [text-shadow:.2rem_.2rem_0_black] [-webkit-text-stroke:.1rem_black] font-medium">
                     ABOUT ME
                   </h1>
                   
-                  <div className="bg-gray-300 border-black relative -translate-y-6 h-[110%] flex items-center justify-center">
+                  <div className="bg-gray-300 border-black relative -translate-y-10 h-[110%] flex items-center justify-center shadow-[0.375rem_0.375rem_0_black] border-4">
                     <p className="font-['Orbit'] text-sm text-center text-black">
                       Hello!
                     </p>
@@ -58,6 +57,12 @@ function LandingPage() {
 
               </div>
             </div>
+
+            <div>
+              hello
+            </div>
+
+
           </div>
 
         </div>
