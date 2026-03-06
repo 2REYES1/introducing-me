@@ -7,7 +7,7 @@ function ExperienceCard(props){
             </div>
 
             <div id="company-name-section" className="flex">
-                <p className="font-['Orbit'] text-sm bg-gray-700 py-2 px-4 -translate-x-2 translate-y-3 shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)]">
+                <p className="font-['Silkscreen'] text-sm bg-gray-700 py-2 px-4 -translate-x-2 translate-y-3 shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)]">
                     {props.company}
                 </p>
             </div>
