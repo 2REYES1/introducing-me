@@ -2,9 +2,9 @@ import ExperienceCard from "../ExperienceCard/ExperienceCard";
 
 function ExperiencePanel(){
     const experiences = [
-  { company: "1", role: "Software Engineer Intern", date: "jan 2026 - present", desciption: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] },
-  { company: "2", role: "Software Engineer Intern", startDate: "jan 2026 - present", desciption: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] },
-  { company: "3", role: "Software Engineer Intern", startDate: "jan 2026 - present", desciption: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] }
+  { company: "Super Cool Company", role: "Software Engineer Intern", date: "jan 2026 - present", description: ["bullet1","bullet2","bullet3", "bullet2","bullet3", "bullet4"], tech: ["tech1","tech2","tech"] },
+  { company: "2", role: "Software Engineer Intern", date: "jan 2026 - present", description: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] },
+  { company: "3", role: "Software Engineer Intern", date: "jan 2026 - present", description: ["bullet1","bullet2","bullet3", "bullet4","bullet2","bullet3", "bullet4"], tech: ["tech1","tech2","tech"] }
 ];
 
     return(
