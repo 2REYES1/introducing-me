@@ -1,9 +1,19 @@
-
+import ExperienceCard from "../ExperienceCard/ExperienceCard";
 
 function ExperiencePanel(){
+    const experiences = [
+  { company: "1", role: "Software Engineer Intern", date: "jan 2026 - present", desciption: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] },
+  { company: "2", role: "Software Engineer Intern", startDate: "jan 2026 - present", desciption: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] },
+  { company: "3", role: "Software Engineer Intern", startDate: "jan 2026 - present", desciption: ["bullet1","bullet2","bullet3"], tech: ["tech1","tech2","tech"] }
+];
+
     return(
         <div>
-            hello
+            {experiences.map(experiences => (
+                <div key={experiences.company}>
+                    <ExperienceCard company={experiences.company} role={experiences.role} date={experiences.date} description={experiences.description} tech={experiences.tech}/>
+                </div>
+            ))}
         </div>
     )
 }
