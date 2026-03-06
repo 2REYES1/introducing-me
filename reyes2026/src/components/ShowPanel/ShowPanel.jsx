@@ -44,7 +44,7 @@ function ShowPanel() {
           </button>
 
           {open && (
-            <div className="absolute left-0 mt-1 bg-gray-200 border-2 border-black shadow-[3px_3px_0_black] text-black">
+            <div className="absolute left-0 mt-1 bg-gray-200 border-2 border-black shadow-[3px_3px_0_black] text-black z-10">
               {options.map((option) => (
                 <button
                   key={option}
@@ -61,7 +61,7 @@ function ShowPanel() {
       </div>
 
       {/* Content Area */}
-      <div className="max-h-[500px] bg-gray-300 p-4">
+      <div className="max-h-[400px] bg-gray-300 p-4 overflow-y-auto">
         {renderPanel()}
       </div>
 
