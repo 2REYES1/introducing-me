@@ -14,17 +14,13 @@ function ExperienceCard(props){
 
             <div id="content-section" className="bg-[#6D6D6D] border-2 border-black font-['Orbit'] max-h-[200px] overflow-y-auto text-sm shadow-[0.375rem_0.375rem_0_rgba(0,0,0,0.25)] pt-2 pb-2">
                 <p className="p-3 text-left">
-                  {props.description.map((item,index) => (
-                    <div key={index}>
-                      {item}
-                    </div>
-                  )
-
-                  )} 
+                  {props.description?.map((item, index) => (
+                    <div key={index} className="py-1">∘ {item}</div>
+                  ))} 
                 </p>
                 <p className="p-3 text-left" >
                   <span className="text-black font-bold">Technologies: </span>
-                  {props.tech.map((item,index) => (
+                  {props.technologies?.map((item,index) => (
                     <span key={index}>
                       {item},{" "}   
                     </span>
@@ -34,7 +30,7 @@ function ExperienceCard(props){
             </div>
             <div id="date-section" className="w-full flex justify-end translate-x-2">
                 <p className="font-['Orbit'] text-sm bg-black p-2 -translate-y-3 shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)]">
-                    {props.date}
+                    {props.startDate} - {props.endDate}
                 </p>
             </div>
             
