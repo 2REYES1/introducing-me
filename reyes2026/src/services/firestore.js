@@ -112,7 +112,22 @@ export async function getImportantLinks(){
         return docSnap.data();
 
     } else {
-        console.log("AboutMe doc does not exist.");
+        console.log("ImportantLinks doc does not exist.");
+        return null
+    }
+}
+
+export async function getLastUpdatedDate(){
+    const docRef = doc(db, "BasicInfo", "LastUpdate");
+    const docSnap = await getDoc(docRef);
+        if (docSnap.exists()){
+            const data = docSnap.data();
+        return {
+            date: formatMonthDayYear(data.date)
+        }
+
+    } else {
+        console.log("LastUpdated doc does not exist.");
         return null
     }
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import WelcomeButton from "../../components/WelcomeButton/WelcomeButton";
 import ShowPanel from "../../components/ShowPanel/ShowPanel";
-import { getAboutMeInfo, getImportantLinks } from "../../services/firestore.js"
+import { getAboutMeInfo, getImportantLinks, getLastUpdatedDate } from "../../services/firestore.js"
 import profilePic from "../../assets/me-picture.jpg";
 
 function LandingPage() {
@@ -10,6 +10,7 @@ function LandingPage() {
   const [resumeLink, setResumeLink] = useState("");
   const [githubLink, setGithubLink] = useState("");
   const [linkedInLink, setLinkedInLink] = useState("");
+  const [lastUpdatedDate, setLastUpdatedDate] = useState("");
 
   const handleEnter = () => {
     setEntered(true);
@@ -18,9 +19,10 @@ function LandingPage() {
   useEffect(
     () => {
       const fetchAboutMe = async () => {
-        const [aboutMeInfoData, linksData] = await Promise.all([
+        const [aboutMeInfoData, linksData, lastUpdatedDateData] = await Promise.all([
           getAboutMeInfo(),
-          getImportantLinks()
+          getImportantLinks(),
+          getLastUpdatedDate()
         ]);
 
 
@@ -29,6 +31,7 @@ function LandingPage() {
         setResumeLink(linksData.resumeLink);
         setGithubLink(linksData.githubLink);
         setLinkedInLink(linksData.linkedInLink);
+        setLastUpdatedDate(lastUpdatedDateData.date)
       };
 
       fetchAboutMe()
@@ -50,7 +53,7 @@ function LandingPage() {
           <div className="flex flex-col items-center justify-center h-screen w-[95%] max-w-[400px] mx-auto">
             {/* HEADER PORTION */}
             <div id="header-portion" className="w-[95%] mt-10">
-                <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: 3 March 2026</p>
+                <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: {lastUpdatedDate}</p>
                 <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 shadow-[0.375rem_0.375rem_0_black]">
                     ALYSSA REYES
                 </div>
