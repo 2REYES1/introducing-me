@@ -22,9 +22,10 @@ function NewsPanel(){
 ];
 
     return(
-        <div>
+        <div className="flex flex-col items-center">
+            
             {news.map(news => (
-                <div key={news.id}>
+                <div key={news.id} className="flex flex-col items-center w-full">
                     <NewsCard newsTitle={news.newsTitle} content={news.content} date={news.date}/>
         
                 </div>
