@@ -1,12 +1,36 @@
 import { db } from "../firebase/firebase.js";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
+function formatMonthDayYear(timestamp) {
+  if (!timestamp) return "";
+
+  const date = timestamp.toDate();
+
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export async function getNews() {
-    const querySnapshot = await getDocs(collection(db, "News"));
-    return querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-    }));
+    const q = query(
+        collection(db, "News"),
+        orderBy("date", "desc") 
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    return querySnapshot.docs.map((doc) => {
+        const data = doc.data();
+
+        return {
+            id: doc.id,
+            content: data.content,
+            date: formatMonthDayYear(data.date),
+            newsTitle: data.newsTitle
+        };
+    });
 }
 
 
@@ -45,5 +69,24 @@ export async function getExperience(){
 }
 
 export async function getProjects(){
-    
+    const q = query(
+        collection(db, "Projects"),
+        orderBy("date", "desc")
+    )
+
+    const querySnapshot = await getDocs(q);
+
+    return querySnapshot.docs.map((doc) => {
+        const data = doc.data();
+
+        return {
+            id: doc.id,
+            projectName: data.projectName,
+            date: formatMonthYear(data.date),
+            description: data.description || [],
+            technologies: data.technologies || [],
+            demo: data.demo
+        };
+    });
+
 }
