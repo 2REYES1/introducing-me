@@ -71,7 +71,7 @@ function LandingPage() {
 
               <div
                 id="profile-pic-box"
-                className="h-[200px] aspect-[3/4] bg-gray-300 border-4 border-black z-10 relative shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0 "
+                className="h-[200px] aspect-[3/4] bg-gray-300 border-4 border-black z-10 relative shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0"
               >
                 <img
                   src={profilePic}
@@ -80,13 +80,16 @@ function LandingPage() {
                 />
               </div>
 
-              <div className="flex-1 h-[200px] flex flex-col">
+              <div className="flex-1 h-[200px] relative flex flex-col">
+
                 <p className="font-['Silkscreen'] z-20 text-4xl text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
                   ABOUT ME
                 </p>
-                <div className="flex-1 overflow-y-auto font-['Orbit'] text-sm py-5 pl-10 pr-4 w-[120%] -translate-x-10 -translate-y-5 bg-gray-300 text-black font-black border-5 border-black shadow-[0.2rem_0.2rem_0_black]">
+
+                <div className="absolute top-5 right-0 h-[170px] w-2xs overflow-y-auto font-['Orbit'] text-sm py-5 pl-12 pr-4 py-2 bg-gray-300 text-black font-black border-5 border-black shadow-[0.2rem_0.2rem_0_black]">
                   {aboutMeInfo}
                 </div>
+
               </div>
 
             </div>
