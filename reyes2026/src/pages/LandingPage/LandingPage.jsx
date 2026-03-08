@@ -48,9 +48,9 @@ function LandingPage() {
 
       {/* Main landing page content */}
       {entered && (
-        <div className="flex flex-col items-center justify-center h-screen">
+        <div className="flex flex-col items-center justify-center min-h-screen">
 
-          <div className="flex flex-col items-center justify-center h-screen w-[95%] max-w-[400px] mx-auto">
+          <div className="flex flex-col items-center justify-center min-h-screen w-[95%] max-w-[400px] mx-auto">
             {/* HEADER PORTION */}
             <div id="header-portion" className="w-[95%] mt-10">
                 <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: {lastUpdatedDate}</p>
@@ -82,11 +82,11 @@ function LandingPage() {
 
               <div className="flex-1 h-[200px] relative flex flex-col">
 
-                <p className="font-['Silkscreen'] z-20 text-4xl text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+                <p className="font-['Silkscreen'] -translate-x-10 z-20 text-[1.8rem] sm:text-4xl text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)] -translate-y-1 sm:translate-y-0">
                   ABOUT ME
                 </p>
 
-                <div className="absolute top-5 right-0 h-[170px] w-2xs overflow-y-auto font-['Orbit'] text-sm py-5 pl-12 pr-4 py-2 bg-gray-300 text-black font-black border-5 border-black shadow-[0.2rem_0.2rem_0_black]">
+                <div className="absolute top-5 right-0 h-[170px] overflow-y-auto font-['Orbit'] text-sm w-xs py-5 pl-39 min-[375px]:pl-33 min-[390px]:pl-30 min-[390px]:pl-28 min-[400px]:pl-23 sm:pl-12 pr-4 py-2 bg-gray-300 text-black font-black border-5 border-black shadow-[0.2rem_0.2rem_0_black]">
                   {aboutMeInfo}
                 </div>
 
@@ -95,7 +95,7 @@ function LandingPage() {
             </div>
 
             {/* SHOW PANEL PORTION */}
-            <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] h-full mb-10 flex-1 max-h-[500px]">
+            <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] mb-10 flex">
               <ShowPanel/>
             </div>
 
