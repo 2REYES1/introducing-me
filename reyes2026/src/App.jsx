@@ -3,7 +3,7 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/introducing-me">
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>
