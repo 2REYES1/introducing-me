@@ -85,7 +85,8 @@ export async function getProjects(){
             date: formatMonthYear(data.date),
             description: data.description || [],
             technologies: data.technologies || [],
-            demo: data.demo
+            githubLink: data.githubLink,
+            videoLink: data.videoLink || null,
         };
     });
 

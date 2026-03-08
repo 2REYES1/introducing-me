@@ -29,7 +29,7 @@ function ProjectsPanel(){
         <div className="flex flex-col items-center">
             {projects.map(projects => (
                 <div key={projects.projectName} className="flex flex-col items-center w-full">
-                    <ProjectCard projectName={projects.projectName} description={projects.description} technologies={projects.technologies} githubLink={projects.demo} />
+                    <ProjectCard projectName={projects.projectName} description={projects.description} technologies={projects.technologies} githubLink={projects.githubLink} videoLink={projects.videoLink}/>
                 </div>
             ))}
         </div>

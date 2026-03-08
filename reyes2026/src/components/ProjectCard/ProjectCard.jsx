@@ -54,8 +54,11 @@ function ProjectCard(props) {
             </div>
 
 
-            <div className="w-full flex justify-end pt-2">
-              <a className="bg-[#B2D365] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.githubLink} target="_blank" rel="noopener noreferrer">VIEW PROJECT</a>
+            <div className="w-full flex justify-end pt-2 gap-2">
+              {props.videoLink && (
+                <a className="bg-[#B2D365] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.videoLink} target="_blank" rel="noopener noreferrer">DEMO</a>
+              )}
+              <a className="bg-[#B2D365] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.githubLink} target="_blank" rel="noopener noreferrer">GITHUB</a>
             </div>
 
           </div>
