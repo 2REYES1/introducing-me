@@ -20,6 +20,18 @@ My **main portfolio website** lives in the `reyes2026/` repository. This repo ac
 
 Each version reflects a different stage of my design and development process.
 
+### Upcoming Improvements
+
+Some improvements I plan to implement in future updates include:
+
+Caching database responses to reduce repeated reads and improve performance when retrieving data from Firebase.
+
+Optimizing data fetching logic to minimize unnecessary requests and improve load times.
+
+Improving responsive design for larger screens, ensuring the layout scales cleanly across desktops, ultrawide monitors, and different resolutions.
+
+Continuing to experiment with UI animations and layout structures as part of my front-end development exploration.
+
 ### Tools & Technologies Used For This Project
 
 * React
