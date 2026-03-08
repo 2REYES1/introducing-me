@@ -87,7 +87,7 @@ function LandingPage() {
                 </p>
 
                 {/* Content Box */}
-                <div className="flex-1 bg-gray-300 border-5 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto p-4 -mt-6 mb-3 -ml-5">
+                <div className="flex-1 bg-gray-300 border-5 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto p-4 -mt-6 mb-3 -ml-5 py-5">
                   {aboutMeInfo}
                 </div>
 
