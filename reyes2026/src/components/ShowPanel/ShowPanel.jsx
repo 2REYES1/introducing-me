@@ -37,7 +37,7 @@ function ShowPanel() {
         <div className="relative inline-block">
           <button
             onClick={() => setOpen(!open)}
-            className="font-['Silkscreen'] bg-gray-200 border-2 border-black px-3 py-1 flex items-center gap-2 shadow-[3px_3px_0_black] text-black"
+            className="font-['Silkscreen'] bg-gray-200 border-2 border-black px-3 py-1 flex items-center gap-2 shadow-[3px_3px_0_black] text-black transform transition duration-200 hover:scale-105"
           >
             {selected}
             <span>▼</span>
