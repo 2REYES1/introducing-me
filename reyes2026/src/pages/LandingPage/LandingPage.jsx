@@ -67,12 +67,10 @@ function LandingPage() {
             </div>
 
             {/* ABOUT ME PORTION */}
-            <div id="about-me-row" className="mt-3 flex items-center justify-center w-full mb-3 gap-4">
+            <div className="mt-3 flex items-center justify-center w-full mb-3 gap-4 ">
 
-              <div
-                id="profile-pic-box"
-                className="h-[200px] aspect-[3/4] bg-gray-300 border-4 border-black z-10 relative shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0"
-              >
+              {/* Profile Picture */}
+              <div className="h-[200px] aspect-[3/4] bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0 z-10">
                 <img
                   src={profilePic}
                   alt="Profile"
@@ -80,13 +78,16 @@ function LandingPage() {
                 />
               </div>
 
-              <div className="flex-1 h-[200px] relative flex flex-col">
+              {/* About Section */}
+              <div className="flex flex-col flex-1 h-[200px] relative">
 
-                <p className="font-['Silkscreen'] -translate-x-10 z-20 text-[1.8rem] sm:text-4xl text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)] -translate-y-1 sm:translate-y-0">
+                {/* Title */}
+                <p className="font-['Silkscreen'] text-[1.8rem] sm:text-4xl text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)] relative z-20 -ml-10">
                   ABOUT ME
                 </p>
 
-                <div className="absolute top-5 right-0 h-[170px] overflow-y-auto font-['Orbit'] text-sm w-xs py-5 pl-39 min-[375px]:pl-33 min-[390px]:pl-30 min-[390px]:pl-28 min-[400px]:pl-23 sm:pl-12 pr-4 py-2 bg-gray-300 text-black font-black border-5 border-black shadow-[0.2rem_0.2rem_0_black]">
+                {/* Content Box */}
+                <div className="flex-1 bg-gray-300 border-5 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto p-4 -mt-6 mb-3 -ml-5">
                   {aboutMeInfo}
                 </div>
 
