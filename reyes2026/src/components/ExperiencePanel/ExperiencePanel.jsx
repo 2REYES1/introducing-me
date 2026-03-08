@@ -27,7 +27,7 @@ function ExperiencePanel(){
     return(
         <div className="flex flex-col items-center">
             {experiences.map(experiences => (
-                <div key={experiences.company} className="flex flex-col items-center w-full">
+                <div key={experiences.company + experiences.role} className="flex flex-col items-center w-full">
                     <ExperienceCard company={experiences.company} role={experiences.role} startDate={experiences.startDate} endDate={experiences.endDate} description={experiences.description} technologies={experiences.technologies}/>
                 </div>
             ))}

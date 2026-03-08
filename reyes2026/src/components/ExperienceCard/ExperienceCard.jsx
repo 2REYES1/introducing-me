@@ -18,11 +18,11 @@ function ExperienceCard(props){
                 {props.technologies?.join(", ")}
                 </p>
 
-                <p className="p-3 text-left">
+                <div className="p-3 text-left">
                   {props.description?.map((item, index) => (
                     <div key={index} className="py-1">∘ {item}</div>
                   ))} 
-                </p>
+                </div>
 
             
             </div>
