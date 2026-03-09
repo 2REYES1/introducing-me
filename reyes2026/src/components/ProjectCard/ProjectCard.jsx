@@ -46,7 +46,7 @@ function ProjectCard(props) {
                 
                 <p className="px-3 pb-2 text-left">
                   {props.description?.map((item, index) => (
-                    <div key={index} className="py-1">∘ {item}</div>
+                    <p key={index} className="py-1">∘ {item}</p>
                   ))} 
                 </p>
                 

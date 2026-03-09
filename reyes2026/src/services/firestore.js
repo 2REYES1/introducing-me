@@ -1,6 +1,10 @@
 import { db } from "../firebase/firebase.js";
 import { collection, getDocs, query, orderBy, doc, getDoc } from "firebase/firestore";
 
+let experienceCache = null;
+let newsCache = null;
+let projectsCache = null;
+
 function formatMonthDayYear(timestamp) {
   if (!timestamp) return "";
 
@@ -11,26 +15,6 @@ function formatMonthDayYear(timestamp) {
     month: "long",
     day: "numeric",
   });
-}
-
-export async function getNews() {
-    const q = query(
-        collection(db, "News"),
-        orderBy("date", "desc") 
-    );
-
-    const querySnapshot = await getDocs(q);
-
-    return querySnapshot.docs.map((doc) => {
-        const data = doc.data();
-
-        return {
-            id: doc.id,
-            content: data.content,
-            date: formatMonthDayYear(data.date),
-            newsTitle: data.newsTitle
-        };
-    });
 }
 
 
@@ -45,15 +29,51 @@ function formatMonthYear(timestamp) {
     });
 }
 
+
+export async function getNews() {
+
+    if (newsCache){
+        console.log("newsCache is used!");
+        return newsCache;
+    }
+
+    const q = query(
+        collection(db, "News"),
+        orderBy("date", "desc") 
+    );
+    console.log("Fetching News from Firestore...");
+    const querySnapshot = await getDocs(q);
+
+    const news = querySnapshot.docs.map((doc) => {
+        const data = doc.data();
+
+        return {
+            id: doc.id,
+            content: data.content,
+            date: formatMonthDayYear(data.date),
+            newsTitle: data.newsTitle
+        };
+    });
+
+    newsCache = news;
+    return news;
+}
+
+
 export async function getExperience(){
+
+    if (experienceCache){
+        console.log("experienceCache is used!");
+        return experienceCache;
+    }
     const q = query(
         collection(db, "Experience"),
         orderBy("startDate", "desc") 
     );
-
+    console.log("Fetching Experience from Firestore...");
     const querySnapshot = await getDocs(q);
 
-    return querySnapshot.docs.map((doc) => {
+    const experience = querySnapshot.docs.map((doc) => {
         const data = doc.data();
 
         return {
@@ -66,9 +86,19 @@ export async function getExperience(){
             technologies: data.technologies || []
         };
     });
+
+    experienceCache = experience;
+    return experience;
+
 }
 
 export async function getProjects(){
+
+    if (projectsCache){
+        console.log("projectsCache used!");
+        return projectsCache;
+    }
+    console.log("Fetching Projects from Firestore...");
     const q = query(
         collection(db, "Projects"),
         orderBy("date", "desc")
@@ -76,7 +106,8 @@ export async function getProjects(){
 
     const querySnapshot = await getDocs(q);
 
-    return querySnapshot.docs.map((doc) => {
+
+    const projects = querySnapshot.docs.map((doc) => {
         const data = doc.data();
 
         return {
@@ -90,6 +121,8 @@ export async function getProjects(){
         };
     });
 
+    projectsCache = projects;
+    return projects;
 }
 
 export async function getAboutMeInfo(){
