@@ -44,11 +44,11 @@ function ProjectCard(props) {
             <div id="projects-content-section" className="bg-[#6D6D6D] border-2 border-black font-['Orbit'] max-h-[200px] overflow-y-auto text-sm shadow-[0.375rem_0.375rem_0_rgba(0,0,0,0.25)] my-2 w-full">
                 
                 
-                <p className="px-3 pb-2 text-left">
+                <div className="px-3 pb-2 text-left">
                   {props.description?.map((item, index) => (
                     <p key={index} className="py-1">∘ {item}</p>
                   ))} 
-                </p>
+                </div>
                 
             
             </div>
