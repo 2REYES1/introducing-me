@@ -41,7 +41,7 @@ function LandingPage() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-[#B2D365] text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#B2D365] to-black text-white">
 
       {/* Show popup if user hasn't entered */}
       {!entered && <WelcomeButton onEnter={handleEnter} />}
@@ -50,15 +50,17 @@ function LandingPage() {
       {entered && (
         <div className="flex flex-col items-center justify-center min-h-screen">
 
-          <div className="flex flex-col items-center justify-center min-h-screen w-[95%] max-w-[400px] mx-auto">
+          <div className="flex flex-col items-center justify-center min-h-screen w-[95%] max-w-[400px] mx-auto ">
             {/* HEADER PORTION */}
-            <div id="header-portion" className="w-[95%] mt-10">
-                <p className="font-['Orbit'] text-sm mb-1">LAST UPDATED: {lastUpdatedDate}</p>
-                <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 shadow-[0.375rem_0.375rem_0_black]">
+            <div id="header-portion" className="w-[95%] mt-10 animate-float" style={{ animationDelay: '-0.4s' }}>
+                <p className="font-['Orbit'] text-sm mb-1 text-black">LAST UPDATED: {lastUpdatedDate}</p>
+                <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 shadow-[0.375rem_0.375rem_0_black] pl-2">
+                  <span className="inline-block scale-y-170 origin-center py-3">
                     ALYSSA REYES
+                  </span>
                 </div>
                 <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-[0.375rem_0.375rem_0_black]">
-                    <p className="drop-shadow-lg font-bold">
+                    <p className="drop-shadow-lg font-bold text-left px-2 py-1">
                        <span><a href={linkedInLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">
                         LINKEDIN</a></span> | <span><a href={githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">GITHUB</a></span> | <span><a href={resumeLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">RESUME</a></span>  
                     </p>
@@ -67,36 +69,27 @@ function LandingPage() {
             </div>
 
             {/* ABOUT ME PORTION */}
-            <div className="mt-3 flex items-center justify-center w-full mb-3 gap-4 ">
+            <div className="mt-3 w-full mb-3 px-2 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-3">
 
-              {/* Profile Picture */}
-              <div className="h-[200px] aspect-[3/4] bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0 z-10">
-                <img
-                  src={profilePic}
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
+              {/* Profile Picture — spans both rows */}
+              <div className="row-span-2 h-[230px] aspect-[3/4] bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0 z-10 animate-float">
+                <img src={profilePic} alt="Profile" className="w-full h-full object-cover" />
               </div>
 
-              {/* About Section */}
-              <div className="flex flex-col flex-1 h-[200px] relative">
+              {/* Title — row 1, col 2 */}
+              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)] z-20 self-end inline-block animate-float-scaleY-1-2">
+                ABOUT ME
+              </p>
 
-                {/* Title */}
-                <p className="font-['Silkscreen'] text-[1.8rem] sm:text-4xl text-[#B2D365] [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(0,0,0,1)] relative z-20 -ml-10">
-                  ABOUT ME
-                </p>
-
-                {/* Content Box */}
-                <div className="flex-1 bg-gray-300 border-5 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto p-4 -mt-6 mb-3 -ml-5 py-5">
-                  {aboutMeInfo}
-                </div>
-
+              {/* Content Box — row 2, col 2 */}
+              <div className="flex-1 bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto max-h-[200px] pl-4 -ml-4 pt-2 animate-float" style={{ animationDelay: '-0.8s' }}>
+                {aboutMeInfo}
               </div>
 
             </div>
 
             {/* SHOW PANEL PORTION */}
-            <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] mb-10 flex">
+            <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] mb-10 flex animate-float" style={{ animationDelay: '-0.5s' }}>
               <ShowPanel/>
             </div>
 
