@@ -8,7 +8,7 @@ function ProjectCard(props) {
     <div className="flex flex-col items-center">
 
       {/* Folder Icon */}
-      <FolderIcon onClick={() => setOpen(true)} className="w-40 h-40 text-black hover:scale-110 transition drop-shadow-[4px_5px_0_rgba(0,0,0,0.25)]" />
+      <FolderIcon onClick={() => setOpen(true)} className="w-40 h-40 text-black hover:scale-110 transition drop-shadow-[4px_5px_0_rgba(0,0,0,0.25)]"/>
       <p className={"text-black font-['Orbit']"}>{props.projectName}</p>
 
       {/* Popup */}

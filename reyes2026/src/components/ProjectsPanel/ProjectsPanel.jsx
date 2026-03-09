@@ -1,6 +1,9 @@
 import ProjectCard from "../ProjectCard/ProjectCard";   
 import { getProjects } from "../../services/firestore.js";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+
+const randomDelay = () => `${(Math.random() * 20 - 10).toFixed(2)}s`;
+
 
 function ProjectsPanel(){
 
@@ -28,7 +31,7 @@ function ProjectsPanel(){
     return(
         <div className="flex flex-col items-center">
             {projects.map(projects => (
-                <div key={projects.projectName} className="flex flex-col items-center w-full">
+                <div key={projects.projectName} className="flex flex-col items-center w-full animate-float" style={{ animationDelay: randomDelay() }}>
                     <ProjectCard projectName={projects.projectName} description={projects.description} technologies={projects.technologies} githubLink={projects.githubLink} videoLink={projects.videoLink}/>
                 </div>
             ))}
