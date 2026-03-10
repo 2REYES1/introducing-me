@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FolderIcon from "../FolderIcon/FolderIcon.jsx";
+import { createPortal } from "react-dom";
 
 function ProjectCard(props) {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ function ProjectCard(props) {
       <p className={"text-black font-['Orbit']"}>{props.projectName}</p>
 
       {/* Popup */}
-      {open && (
+      {open && createPortal(
         <div
           className="z-70 fixed inset-0 flex items-center justify-center bg-black/40 text-black"
           onClick={() => setOpen(false)}
@@ -62,7 +63,8 @@ function ProjectCard(props) {
             </div>
 
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
     </div>

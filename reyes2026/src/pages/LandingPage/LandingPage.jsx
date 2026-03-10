@@ -75,8 +75,8 @@ function LandingPage() {
                     ALYSSA REYES
                   </span>
                 </div>
-                <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-[0.375rem_0.375rem_0_black]">
-                    <p className="drop-shadow-lg font-bold text-left px-2 py-1">
+                <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-[0.375rem_0.375rem_0_black] realtive z-70">
+                    <p className="drop-shadow-lg font-bold text-left px-2 py-1 z-70">
                        <span><a href={linkedInLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">
                         LINKEDIN</a></span> | <span><a href={githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">GITHUB</a></span> | <span><a href={resumeLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">RESUME</a></span>  
                     </p>
@@ -98,7 +98,7 @@ function LandingPage() {
               </div>
 
               {/* Title — row 1, col 2 */}
-              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] -translate-y-3 text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-20 self-end inline-block animate-float">
+              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] translate-y-2 text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 self-end inline-block animate-float">
                 ABOUT ME
               </p>
 
