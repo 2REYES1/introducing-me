@@ -2,12 +2,20 @@ import { useState, useEffect } from "react";
 import WelcomeButton from "../../components/WelcomeButton/WelcomeButton";
 import ShowPanel from "../../components/ShowPanel/ShowPanel";
 import Dither from "../../components/Dither/Dither"; 
-import { getAboutMeInfo, getImportantLinks, getLastUpdatedDate } from "../../services/firestore.js"
+import { getAboutMeInfo, getImportantLinks, getLastUpdatedDate, getSkillsTags, getSpecialtyTags } from "../../services/firestore.js"
 import profilePic from "../../assets/me-picture.jpg";
+
+const randomDelay = () => `${(Math.random() * -9 - 1).toFixed(2)}s`;
 
 function LandingPage() {
   const [entered, setEntered] = useState(false);
-  const [aboutMeInfo, setAboutMeInfo] = useState("");
+  const [aboutMeInfo, setAboutMeInfo] = useState([]);
+  const [specialtyTags, setSpecialtyTags] = useState([]);
+  const [skillsTags, setSkillsTags] = useState([]);
+  const [showAllSkills, setShowAllSkills] = useState(false);
+  const VISIBLE_COUNT = 10;
+  const visibleSkills = showAllSkills ? skillsTags : skillsTags.slice(0, VISIBLE_COUNT);
+
   const [resumeLink, setResumeLink] = useState("");
   const [githubLink, setGithubLink] = useState("");
   const [linkedInLink, setLinkedInLink] = useState("");
@@ -19,16 +27,20 @@ function LandingPage() {
 
   useEffect(() => {
     const fetchAboutMe = async () => {
-      const [aboutMeInfoData, linksData, lastUpdatedDateData] = await Promise.all([
+      const [aboutMeInfoData, linksData, lastUpdatedDateData, specialtyTagsData, skillsTagsData] = await Promise.all([
         getAboutMeInfo(),
         getImportantLinks(),
-        getLastUpdatedDate()
+        getLastUpdatedDate(),
+        getSpecialtyTags(),
+        getSkillsTags(),
       ]);
       setAboutMeInfo(aboutMeInfoData.content);
       setResumeLink(linksData.resumeLink);
       setGithubLink(linksData.githubLink);
       setLinkedInLink(linksData.linkedInLink);
       setLastUpdatedDate(lastUpdatedDateData.date);
+      setSpecialtyTags(specialtyTagsData.tags)
+      setSkillsTags(skillsTagsData.skills)
     };
     fetchAboutMe();
   }, []);
@@ -73,7 +85,7 @@ function LandingPage() {
 
               {/* Name */}
               <div className="font-['Silkscreen'] text-4xl text-black drop-shadow-[0.2rem_0.2rem_0_white]/70">
-                <span className="inline-block scale-y-170 origin-center py-4 animate-float -translate-y-1 pointer-events-none pl-2 " style={{ animationDelay: '-1.5s' }}>
+                <span className="inline-block scale-y-170 origin-center py-4 animate-float -translate-y-1 pointer-events-none pl-2 " style={{ animationDelay: randomDelay() }}>
                   ALYSSA REYES
                 </span>
               </div>
@@ -105,7 +117,7 @@ function LandingPage() {
             </header>
           </div>
           {/* ── PAGE CONTENT ── */}
-          <div className="flex flex-col items-center w-[95%] max-w-[400px] mx-auto pb-16 mt-6">
+          <div className="flex flex-col items-center w-[95%] max-w-[400px] mx-auto pb-16 mt-2">
 
             {/* ABOUT ME PORTION */}
             <div className="w-full mb-3 px-2 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-3">
@@ -121,17 +133,62 @@ function LandingPage() {
               </div>
 
               {/* Title — row 1, col 2 */}
-              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] -translate-y-3 text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 self-end inline-block animate-float pointer-events-none">
+              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] -translate-y-3 text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 self-end inline-block animate-float pointer-events-none" style={{ animationDelay: randomDelay() }}>
                 ABOUT ME
               </p>
 
               {/* Content Box — row 2, col 2 */}
-              <div className="flex-1 bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto max-h-[200px] pl-4 -ml-4 pt-2">
-                {aboutMeInfo}
+              <div className="flex-1 bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black -ml-4 flex flex-col justify-center items-left px-4 py-5 max-h-[200px] overflow-y-auto">
+                {aboutMeInfo.map((item, index) => (
+                  <p key={index} className="py-1 text-xs">{item}</p>
+                ))}
               </div>
 
             </div>
 
+            {/* Interests Section */}
+            <div className="pl-3">
+              <div className="font-['Silkscreen'] text-[1.7rem] sm:text-[2rem] text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 self-end inline-block animate-float pointer-events-none mb-3" style={{ animationDelay: randomDelay() }}>Interests</div>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 mb-3">
+                {specialtyTags.map((item, index) => (
+                  <span className="border-3 border-black bg-gray-300 text-black font-['Orbit'] text-sm px-3 rounded-md py-1 animate-float" key={index} style={{ animationDelay: randomDelay() }}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Skills Section */}
+            <div className="pr-3">
+              <div className="font-['Silkscreen'] text-[1.7rem] sm:text-[2rem] text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 inline-block animate-float pointer-events-none mb-3 text-right w-full" style={{ animationDelay: randomDelay() }}>
+                TECH STACK
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 mb-3 justify-end">
+                {visibleSkills.map((item, index) => (
+                  <span
+                    className="border-3 border-black bg-gray-300 text-black font-['Orbit'] text-sm px-3 rounded-md py-1 animate-float"
+                    key={index}
+                    style={{ animationDelay: randomDelay() }}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+              {skillsTags.length > VISIBLE_COUNT && (
+                <div className="flex justify-end mb-7">
+                  <button
+                    onClick={() => setShowAllSkills(!showAllSkills)}
+                    className="font-['Orbit'] text-[0.6rem]  text-white bg-[#8CA673]/50 border-2 border-black px-3 py-1 5] transition-colors duration-150"
+                  >
+                    {showAllSkills ? "SHOW LESS ▲" : "SEE MORE ▼"}
+                  </button>
+                </div>
+              )}
+            </div>
+
+
+
+            
             {/* SHOW PANEL PORTION */}
             <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] mb-10 flex">
               <ShowPanel />

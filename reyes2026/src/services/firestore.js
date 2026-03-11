@@ -138,6 +138,32 @@ export async function getAboutMeInfo(){
     }
 }
 
+export async function getSpecialtyTags(){
+    const docRef = doc(db, "BasicInfo", "SpecialtyTags");
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()){
+        return docSnap.data();
+
+    } else {
+        console.log("SpecialtyTags doc does not exist.");
+        return null
+    }
+}
+
+export async function getSkillsTags(){
+    const docRef = doc(db, "BasicInfo", "SkillsTags");
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()){
+        return docSnap.data();
+
+    } else {
+        console.log("SkillsTags doc does not exist.");
+        return null
+    }
+}
+
 export async function getImportantLinks(){
     const docRef = doc(db, "BasicInfo", "Links");
     const docSnap = await getDoc(docRef);

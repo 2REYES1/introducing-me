@@ -2,7 +2,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import { getProjects } from "../../services/firestore.js";
 import { useEffect, useState, useMemo } from "react";
 
-const randomDelay = () => `${(Math.random() * 20 - 10).toFixed(2)}s`;
+const randomDelay = () => `${(Math.random() * -9 - 1).toFixed(2)}s`;
 
 
 function ProjectsPanel(){

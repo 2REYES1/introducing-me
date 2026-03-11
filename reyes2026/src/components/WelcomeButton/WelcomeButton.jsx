@@ -6,7 +6,7 @@ function WelcomeButton({ onEnter }) {
 
         <button
           onClick={onEnter}
-          className="font-['Silkscreen'] bg-[#B2D365] border-2 border-black px-2 text-md hover:bg-gray-400 hover:scale-110 transition rounded-lg px-4 py-2"
+          className="font-['Silkscreen'] bg-[#9dcc70] border-2 border-black px-2 text-md hover:bg-gray-400 hover:scale-110 transition rounded-lg px-4 py-2"
         >
           YES
         </button>
