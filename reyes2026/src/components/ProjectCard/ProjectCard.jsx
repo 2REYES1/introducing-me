@@ -23,13 +23,13 @@ function ProjectCard(props) {
             onClick={(e) => e.stopPropagation()}
           >
             <div id="project-card-header" className="flex justify-between items-center w-full">
-              <p className="font-['Silkscreen'] text-3xl text-[#B2D365] [text-shadow:.2rem_.2rem_0_black] [-webkit-text-stroke:.1rem_black] font-medium">
+              <p className="font-['Silkscreen'] text-3xl text-[#9dcc70] [text-shadow:.2rem_.2rem_0_black] [-webkit-text-stroke:.1rem_black] font-medium">
                 {props.projectName}
               </p>
 
               <button
                 onClick={() => setOpen(false)}
-                className="font-['Silkscreen'] bg-[#B2D365] border-2 border-black px-2 text-md hover:bg-gray-400 hover:scale-110 transition"
+                className="font-['Silkscreen'] bg-[#9dcc70] border-2 border-black px-2 text-md hover:bg-gray-400 hover:scale-110 transition"
               >
                 X
               </button>
@@ -38,8 +38,11 @@ function ProjectCard(props) {
             </div>
 
             <p className="py-1 text-left">
-              <span className="text-black font-bold">Tags: </span>
-              {props.technologies?.join(", ")}
+              <span className="text-black font-bold font-['Orbit'] text-sm">Tags: </span>
+              <span className="text-black font-bold font-['Orbit'] text-xs">
+                {props.technologies?.join(", ")}
+              </span>
+              
             </p>
 
             <div id="projects-content-section" className="bg-[#6D6D6D] border-2 border-black font-['Orbit'] max-h-[200px] overflow-y-auto text-sm shadow-[0.375rem_0.375rem_0_rgba(0,0,0,0.25)] my-2 w-full">
@@ -57,9 +60,9 @@ function ProjectCard(props) {
 
             <div className="w-full flex justify-end pt-2 gap-2">
               {props.videoLink && (
-                <a className="bg-[#B2D365] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.videoLink} target="_blank" rel="noopener noreferrer">DEMO</a>
+                <a className="bg-[#9dcc70] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.videoLink} target="_blank" rel="noopener noreferrer">DEMO</a>
               )}
-              <a className="bg-[#B2D365] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.githubLink} target="_blank" rel="noopener noreferrer">GITHUB</a>
+              <a className="bg-[#9dcc70] py-1 px-2 text-xs border-2 border-black font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] hover:bg-gray-400 hover:scale-110 transition" href={props.githubLink} target="_blank" rel="noopener noreferrer">GITHUB</a>
             </div>
 
           </div>

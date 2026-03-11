@@ -3,7 +3,7 @@
 function NewsCard(props) {
     return (
         <div className="flex flex-col w-[95%]">       
-            <div id="news-title-section" className="bg-[#B2D365] max-w-[50%] text-center text-xl font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] border-3 border-black text-black translate-y-3 p-2">
+            <div id="news-title-section" className="bg-[#9dcc70] max-w-[50%] text-center text-xl font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] border-3 border-black text-black translate-y-3 p-2">
                 {props.newsTitle} 
             </div>
             <div id="content-section" className="bg-[#6D6D6D] border-2 border-black font-['Orbit'] max-h-[200px] overflow-y-auto text-sm shadow-[0.375rem_0.375rem_0_rgba(0,0,0,0.25)]">

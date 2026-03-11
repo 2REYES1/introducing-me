@@ -2,7 +2,7 @@ function ExperienceCard(props){
     return (
         <div className="flex flex-col w-[95%]">     
              
-            <div id="role-title-section" className="bg-[#B2D365] text-center text-md font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] border-3 border-black text-black translate-y-4 p-2 z-5">
+            <div id="role-title-section" className="bg-[#9dcc70] text-center text-md font-['Orbit'] shadow-[0.2rem_0.2rem_0_rgba(0,0,0,0.25)] border-3 border-black text-black translate-y-4 p-2 z-5">
                 {props.role} 
             </div>
 
