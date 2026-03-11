@@ -17,93 +17,116 @@ function LandingPage() {
     setEntered(true);
   };
 
-  useEffect(
-    () => {
-      const fetchAboutMe = async () => {
-        const [aboutMeInfoData, linksData, lastUpdatedDateData] = await Promise.all([
-          getAboutMeInfo(),
-          getImportantLinks(),
-          getLastUpdatedDate()
-        ]);
-
-
-
-        setAboutMeInfo(aboutMeInfoData.content);
-        setResumeLink(linksData.resumeLink);
-        setGithubLink(linksData.githubLink);
-        setLinkedInLink(linksData.linkedInLink);
-        setLastUpdatedDate(lastUpdatedDateData.date)
-      };
-
-      fetchAboutMe()
-    },
-    []
-  )
-
+  useEffect(() => {
+    const fetchAboutMe = async () => {
+      const [aboutMeInfoData, linksData, lastUpdatedDateData] = await Promise.all([
+        getAboutMeInfo(),
+        getImportantLinks(),
+        getLastUpdatedDate()
+      ]);
+      setAboutMeInfo(aboutMeInfoData.content);
+      setResumeLink(linksData.resumeLink);
+      setGithubLink(linksData.githubLink);
+      setLinkedInLink(linksData.linkedInLink);
+      setLastUpdatedDate(lastUpdatedDateData.date);
+    };
+    fetchAboutMe();
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#B2D365] to-black text-white">
+    <div className={`min-h-screen text-white ${!entered ? "bg-transparent" : "bg-gradient-to-b from-[#B2D365] to-black"}`}>
 
+      {/* Dither Background */}
+      <div className="fixed inset-0 z-0">
+        <Dither
+          waveColor={[0.55, 0.65, 0.45]}
+          disableAnimation={false}
+          enableMouseInteraction={true}
+          mouseRadius={0.3}
+          colorNum={4}
+          waveAmplitude={0.3}
+          waveFrequency={3}
+          waveSpeed={0.05}
+        />
+      </div>
 
-    {/* Dither Background */}
-    <div className="fixed inset-0 z-0">
-      <Dither
-        waveColor={[0.55, 0.65, 0.45]} // muted sage green
-        disableAnimation={false}
-        enableMouseInteraction={true}
-        mouseRadius={0.3}
-        colorNum={4}
-        waveAmplitude={0.3}
-        waveFrequency={3}
-        waveSpeed={0.05}
-      />
-    </div>
-    
       {/* Show popup if user hasn't entered */}
-      {!entered && <WelcomeButton onEnter={handleEnter} />}
+      {!entered && (
+        <div className="relative z-10">
+          <WelcomeButton onEnter={handleEnter} />
+        </div>
+      )}
 
       {/* Main landing page content */}
       {entered && (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="relative z-10 flex flex-col min-h-screen drop-shadow-[3px_3px_0_black] ">
 
-          <div className="flex flex-col items-center justify-center min-h-screen w-[95%] max-w-[400px] mx-auto z-2">
-            {/* HEADER PORTION */}
-            <div id="header-portion" className="w-[95%] mt-10" >
-                <p className="font-['Orbit'] text-sm mb-1 text-white drop-shadow-[0px_0px_6px_rgba(255,255,255,0.9)]">LAST UPDATED: {lastUpdatedDate}</p>
-                <div className="text-white font-['Silkscreen'] text-4xl bg-black py-2 shadow-[0.375rem_0.375rem_0_black] pl-2">
-                  <span className="inline-block scale-y-170 origin-center py-3 animate-float -translate-y-1" style={{ animationDelay: '-1.5s' }}>
-                    ALYSSA REYES
-                  </span>
-                </div>
-                <div className="font-['Orbit'] text-center bg-[#6D6D6D] text-black shadow-[0.375rem_0.375rem_0_black] realtive z-70">
-                    <p className="drop-shadow-lg font-bold text-left px-2 py-1 z-70">
-                       <span><a href={linkedInLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">
-                        LINKEDIN</a></span> | <span><a href={githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">GITHUB</a></span> | <span><a href={resumeLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#B2D365] hover:text-lg transition">RESUME</a></span>  
-                    </p>
-                    
-                </div>
-            </div>
+          {/* ── STICKY TOPBAR ── */}
+
+          <div className="sticky top-0 z-[100] flex justify-center bg-transparent">
+            <header className="w-[100%] max-w-[400px] px-0 pt-2 pb-0 border-black border-4 bg-[#8CA673]/50 m-2">
+
+              {/* Last updated */}
+              <p className="font-['Orbit'] text-[.7rem] text-black opacity-100 px-2 drop-shadow-[1px_1px_0px_rgba(0,0,0,0.3)] tracking-[1px] font-bold">
+                LAST UPDATED: {lastUpdatedDate}
+              </p>
+
+              {/* Name */}
+              <div className="font-['Silkscreen'] text-4xl text-black drop-shadow-[0.2rem_0.2rem_0_white]/70">
+                <span className="inline-block scale-y-170 origin-center py-4 animate-float -translate-y-1 pointer-events-none pl-2 " style={{ animationDelay: '-1.5s' }}>
+                  ALYSSA REYES
+                </span>
+              </div>
+
+              {/* Links bar */}
+              <div className="flex bg-black">
+                    {[
+                      { label: "LINKEDIN", href: linkedInLink },
+                      { label: "GITHUB",   href: githubLink   },
+                      { label: "RESUME",   href: resumeLink   },
+                    ].map(({ label, href }, i) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`
+                          font-['Orbit'] text-[0.6rem] font-bold text-black bg-gray-300
+                          flex-1 text-center py-[5px] tracking-wide
+                          hover:bg-[#8CA673] hover:text-black transition-colors duration-150 border-x-3 border-t-3 unded-sm 
+                          ${i !== 2 ? "border-black" : ""}
+                        `}
+                      >
+                        {label}
+                      </a>
+                    ))}
+              </div>
+
+            </header>
+          </div>
+          {/* ── PAGE CONTENT ── */}
+          <div className="flex flex-col items-center w-[95%] max-w-[400px] mx-auto pb-16 mt-6">
 
             {/* ABOUT ME PORTION */}
-            <div className="mt-3 w-full mb-3 px-2 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-3">
+            <div className="w-full mb-3 px-2 grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-x-3">
 
               {/* Profile Picture — spans both rows */}
-              <div className="row-span-2 h-[230px] aspect-[3/4] bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0 z-10 ">
-                <img 
-                  src={profilePic} 
-                  alt="Profile" 
+              <div className="row-span-2 h-[230px] aspect-[3/4] bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] overflow-hidden rounded-lg shrink-0 z-10">
+                <img
+                  src={profilePic}
+                  alt="Profile"
                   className="w-full h-full object-cover"
-                  style={{ filter: 'grayscale(30%) sepia(100%) hue-rotate(60deg) saturate(30%)' }} 
+                  style={{ filter: 'grayscale(30%) sepia(100%) hue-rotate(60deg) saturate(30%)' }}
                 />
               </div>
 
               {/* Title — row 1, col 2 */}
-              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] translate-y-2 text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 self-end inline-block animate-float">
+              <p className="font-['Silkscreen'] text-[2.4rem] -ml-18 sm:text-[3rem] -translate-y-3 text-white scale-y-170 origin-center [-webkit-text-stroke:2px_black] drop-shadow-[4px_4px_0_rgba(255,255,255,.7)] z-10 self-end inline-block animate-float pointer-events-none">
                 ABOUT ME
               </p>
 
               {/* Content Box — row 2, col 2 */}
-              <div className="flex-1 bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto max-h-[200px] pl-4 -ml-4 pt-2 ">
+              <div className="flex-1 bg-gray-300 border-4 border-black shadow-[0.2rem_0.2rem_0_black] font-['Orbit'] text-sm font-black text-black overflow-y-auto max-h-[200px] pl-4 -ml-4 pt-2">
                 {aboutMeInfo}
               </div>
 
@@ -111,14 +134,25 @@ function LandingPage() {
 
             {/* SHOW PANEL PORTION */}
             <div id="show-panel-section" className="w-[95%] shadow-[0.375rem_0.375rem_0_black] mb-10 flex">
-              <ShowPanel/>
+              <ShowPanel />
             </div>
-
 
           </div>
 
+          {/* ── STICKY FOOTER ── */}
+          <footer className="sticky bottom-0 left-0 right-0 px-3 py-[5px] flex justify-center z-[100] bg-transparent font-bold">
+            <div className="w-full max-w-[400px] flex justify-between items-center bg-[#8CA673]/75 p-2 border-3 border-black">
+              <span className="font-['Orbit'] text-xs text-black tracking-wide flex items-center">
+                <span className="inline-block w-[5px] h-[5px] bg-black rounded-full mr-1 animate-[blink_1.2s_step-end_infinite]" />
+                AVAILABLE FOR WORK
+              </span>
+              <span className="font-['Orbit'] text-xs text-black tracking-wide">
+                SWE · DATA · ML
+              </span>
+            </div>
+          </footer>
+
         </div>
-        
       )}
 
     </div>
